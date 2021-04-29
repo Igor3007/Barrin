@@ -1,0 +1,108 @@
+extends layouts/index
+include ../blocks/components/video/video
+include ../blocks/components/faq/faq.pug
+
+block variables
+  include ../data/data.pug
+
+
+
+block header
+  .header-top
+    .header-top__logo: a(href='#') Жилой комплекс / <span> Barrin House </span>
+    .header-top__msgr
+      ul
+        li: a(href='#'): +icons('#ic_wa')
+        li: a(href='#'): +icons('#ic_tg')
+    .header-top__phone
+      a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
+    .header-top__btn
+      button.btn.btn-line.btn-small Заказать звонок
+    .header-top__menu
+      .burger
+        i
+        i
+        i
+      | Меню
+
+block content
+
+  section.section-firstblock
+    .firstblock
+      .firstblock__bg: +bgimage('/img/common/first-bg.jpg')
+      .firstblock__content
+        .container
+          .firstblock-tab
+            .firstblock-tab__nav
+              ul
+                li.active: a(href="#") О доме
+                li: a(href="#") планировки
+                li: a(href="#") Галерея
+              .line
+            .firstblock-tab__content
+              .firstblock-tab__item
+                .firstblock-one
+                  .firstblock-one__left
+                    .firstblock-one__address
+                      +icons('#ic_pen')
+                      address Москва, ул. Малая Пироговская, вл. 8 
+                    .firstblock-one__dl
+                      a(href='#')
+                        .pink-round-download
+                          .pink-round-download__round
+                          .pink-round-download__image
+                            +bgimage('/img/common/presentation.png')
+                            span.dl-text Скачать <br> презентацию
+                            +icons('#ic_dl') Скачать презентацию
+                  .firstblock-one__right
+                    .firstblock-one__title: h1 Barrin House — жилой комплекс c квартирами в Хамовниках
+                    .firstblock-one__btn
+                      a(href='#'): button.btn.btn-line Подробнее
+
+  section.section-about
+    .about
+      .about__desc
+        .about__desc-logo: +bgimage('/img/common/logo-barrin.svg')
+        .about__desc-title О ЖК Barrin House
+        .about__desc-text В исторически значимом центре Москвы, в окружении зеленых парков и исторических зданий расположился новый жилой комплекс "Barrin House", Дом на Малой Пироговской». Район Хамовники. Ближайшее метро Фрунзенское всего в пяти минутах ходьбы от жилого комплекса. Недалеко от места застройки памятники архитектуры: Усадьба Трубецких в Хамовниках, Новодевичий монастырь, и парковая зона - сквер Девичьего поля. Монолитно-кирпичное жилое здание разной этажности относится к категории премиум-класса. Одно, двух и трех комнатные квартиры в ЖК "Barrin House", Дом на Малой Пироговской» предлагаются площадью от 58,4 до 394,3 кв.м. 
+
+      .about__gallery
+        .swiper-container
+          .swiper-wrapper
+            each item, index in ['Галерея ЖК Barrin House','Видео о ЖК Barrin House','Галерея ЖК Barrin House','Видео о ЖК Barrin House']
+              .swiper-slide
+                .about-card
+                  .about-card__image: +bgimage('/img/about/'+index+'.jpg')
+                  .about-card__content
+                    .about-card__title= item
+                    .about-card__btn
+                      button.btn.btn-line.btn-white Подробнее
+          .swiper-about-nav
+            .swiper-about-nav__prev: +icons('#ic_swiper-prev')
+            .swiper-about-nav__dots
+            .swiper-about-nav__next: +icons('#ic_swiper-next')
+
+  section.section-infrastructure
+    .infrastructure
+      .infrastructure__wrp
+        .infrastructure__bg: +bgimage('/src/img/common/infrastructure-bg.jpg')
+        .infrastructure__content
+          .infrastructure__title Инфраструктура ЖК Barrin House
+          .infrastructure__tabs
+            .infrastructure-tab
+              .infrastructure-tab__nav
+                ul
+                  li.active: a(href="#") Расположение
+                  li: a(href="#") Архитектура
+                  li: a(href="#") Сервис
+                  li: a(href="#") Зеленый оазис
+                .line
+              .infrastructure-tab__content
+                .infrastructure-tab__item
+block footer
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

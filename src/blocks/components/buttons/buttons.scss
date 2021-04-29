@@ -1,0 +1,85 @@
+.btn {
+
+    color: #000;
+    border: none;
+    padding: 1.6em 3em 1.5em 3em;
+    color: #fff;
+    background: $main;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: none;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(13);
+    letter-spacing: 0.05em;
+
+    @media screen and (max-width: $w1024) {
+        padding: 1.5em 3em;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active,
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+
+    &.btn-small {
+        padding: 0.8em 2em;
+        border: 1px solid #000 !important;
+        font-weight: 400 !important;
+        text-transform: none !important;
+
+        &:hover {
+            border: 1px solid transparent !important;
+        }
+    }
+
+    &.btn-line {
+        border: 2px solid #000;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #000;
+        border-radius: 0;
+
+        &:hover {
+            background-color: $main;
+            color: #fff !important;
+            border-color: $main
+        }
+    }
+
+    &.btn-line-white {
+        border: 2px solid #fff;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #fff;
+            color: #000 !important;
+            border-color: #fff
+        }
+    }
+
+
+    &.btn-full {
+        width: 100%;
+    }
+
+    &.btn-bold {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: rem(1)
+    }
+}
