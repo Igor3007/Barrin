@@ -2,4 +2,4 @@
 //import "%components%/form/form";
 //import "%components%/select/select";
 //// import "%components%/mobile-menu/mobile-menu"; 
-//import "%components%/video/video"; 
+import "%components%/video/video"; 

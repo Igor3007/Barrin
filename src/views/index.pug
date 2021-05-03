@@ -1,6 +1,7 @@
 extends layouts/index
 include ../blocks/components/video/video
 include ../blocks/components/faq/faq.pug
+include ../blocks/modules/minicard/minicard.pug
 
 block variables
   include ../data/data.pug
@@ -40,7 +41,7 @@ block content
                 li: a(href="#") Галерея
               .line
             .firstblock-tab__content
-              .firstblock-tab__item
+              .firstblock-tab__item.active
                 .firstblock-one
                   .firstblock-one__left
                     .firstblock-one__address
@@ -58,6 +59,9 @@ block content
                     .firstblock-one__title: h1 Barrin House — жилой комплекс c квартирами в Хамовниках
                     .firstblock-one__btn
                       a(href='#'): button.btn.btn-line Подробнее
+              .firstblock-tab__item tab2
+              .firstblock-tab__item tab3
+
 
   section.section-about
     .about
@@ -85,7 +89,7 @@ block content
   section.section-infrastructure
     .infrastructure
       .infrastructure__wrp
-        .infrastructure__bg: +bgimage('/src/img/common/infrastructure-bg.jpg')
+        .infrastructure__bg: +bgimage('/img/common/infrastructure-bg.jpg')
         .infrastructure__content
           .infrastructure__title Инфраструктура ЖК Barrin House
           .infrastructure__tabs
@@ -98,7 +102,180 @@ block content
                   li: a(href="#") Зеленый оазис
                 .line
               .infrastructure-tab__content
-                .infrastructure-tab__item
+
+                mixin infrastructure-item(data)
+                  .infrastructure-item
+                    .infrastructure-item__left
+                      .infrastructure-item__title= data.title
+                      .infrastructure-item__desc
+                        ul
+                          li Один из самых престижных районов центра Москвы, в 2 км от Кремля
+                          li Уникальный баланс атмосферы зеленого исторического центра и тихой приватности респектабельных особняков
+                          li Новодевичий монастырь, усадьба Трубецких и Саввинская набережная – маршруты для утренних пробежек
+                          li Сквер Девичьего поля – в минуте ходьбы
+                          li В пешей доступности лучшие московские школы – Филипповская, Лицей №1535 и Школа №57
+                    .infrastructure-item__right
+                      .swiper-container
+                        .swiper-wrapper
+                          each item, index in [1,2,3,4,5]
+                            .swiper-slide
+                              .infrastructure-gallery: +bgimage('/img/common/infrastructure-gallery.jpg')
+                        .swiper-infrastructure-nav
+                          .swiper-infrastructure-nav__prev: +icons('#ic_swiper-prev')
+                          .swiper-infrastructure-nav__dots
+                          .swiper-infrastructure-nav__next: +icons('#ic_swiper-next')
+
+                .infrastructure-tab__item.active: +infrastructure-item({'title':' Хамовники – центр элитной недвижимости Москвы'})
+
+                .infrastructure-tab__item: +infrastructure-item({'title':'Архитектура'}) 
+                .infrastructure-tab__item: +infrastructure-item({'title':'Сервис'})
+                .infrastructure-tab__item: +infrastructure-item({'title':'Зеленый оазис'})
+
+          .infrastructure__title.infrastructure__title--six 6 особняков ЖК Barrin House
+          .infrastructur-plan
+            .infrastructur-plan__image: +bgimage('/img/common/plan.svg')
+            .infrastructur-plan__desc 
+              .infrastructur-plan__desc-wrp Построенный на месте старинных усадеб московских князей, комплекс претендует на звание «фамильного гнезда». Шесть корпусов, примыкающих друг к другу, носят знаменитые фамилии: <strong>Volkonsky House</strong>, <strong>Golitzin House</strong>, <strong>Dolgoruky House</strong>, <strong>Romanoff House</strong>, <strong>Trubetskoy House</strong>, <strong>Razumovsky House</strong>.
+
+  section.section-apartments
+    .container
+      .section-apartments__title Апартаменты ЖК Barrin House
+    .section-apartments__main
+    .apartments-main
+      .apartments-main__bg: +bgimage('/img/common/apartament-bg.jpg')
+      .apartments-main__content
+        .container
+          .apartments-catalog
+            .apartments-catalog__desc В жилом комплексе Barrin House всего 312 квартир площадью от 58,4 до 394,3 кв. м. Особые преимущества — высокие потолки, зимний сад и гардеробные. Вы можете купить квартиру в Barrin House в соответствии с собственными запросами и предпочтениями.
+            .apartments-catalog__filter
+            .apartments-catalog__sort
+            .apartments-catalog__list
+              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1')
+
+            .apartments-catalog__pagination
+              .catalog__pagination
+                .catalog__pagination__start: a(href="#") в начало
+                .catalog__pagination__prev: a(href="#")= '<'
+                .catalog__pagination__page
+                  ul
+                    li: a(href="#") 1
+                    li: a(href="#") 2
+                    li: a(href="#") 3
+                .catalog__pagination__next: a(href="#")= '>'
+                .catalog__pagination__count 3 страницы
+
+  section.sale-department(style="background-image: url(/img/common/sale-bg.svg)")
+    .container
+      .sale-department__title Отдел продаж в ЖК Barrin House
+      .sale-department__desc Мы проведем для вас персональную экскурсию, покажем каждый уголок ЖК, продемонстрируем свободные квартиры, подходящие именно под ваши пожелания
+      .sale-department__slider
+        .swiper-container
+          .swiper-wrapper
+            each item in [1,2,3,2,3,1,2]
+              .swiper-slide
+                .specialist
+                  .specialist__photo: +bgimage('/img/common/u'+item+'.png')
+                  .specialist__name Имя Фамилия
+                  .specialist__post Должность
+          .swiper-sale-nav
+            .swiper-sale-nav__prev: +icons('#ic_swiper-prev-fill')
+            .swiper-sale-nav__next: +icons('#ic_swiper-next-fill')
+      .sale-department__form
+        form(action='#' method='POST')
+          .department-form
+            .department-form__msgr
+              .department-form__msgr-title Как с вами связаться?
+              .department-form__msgr-list
+                label
+                  input(type="radio" name="type-msgr" checked="checked")
+                  +icons('#ic_phone')
+                  span Звонок
+                  hr
+                label
+                  input(type="radio" name="type-msgr")
+                  +icons('#ic_wa')
+                  span WhatsApp
+                  hr
+                label
+                  input(type="radio" name="type-msgr")
+                  +icons('#ic_vb')
+                  span Viber
+                  hr
+                label
+                  input(type="radio" name="type-msgr")
+                  +icons('#ic_tg')
+                  span Telegram
+                  hr
+            .department-form__fields
+              .form
+                .form__item
+                  .form__subitem: input(type="text" placeholder="Your name")
+                  .form__subitem: input(type="tex" placeholder="Your name")
+                  .form__subitem
+                    button.btn.btn-line(type="submit") записаться на экскурсию
+
+
+  section.gallery-jk
+    .container
+      .gallery-jk__title Галерея ЖК Barrin House
+    .gallery-jk__wrp
+      .gallery-jk__bg
+      .gallery-jk__content
+        .gallery-jk__slider
+          .swiper-container
+            .swiper-wrapper
+              each item, index in [1,2,1]
+                .swiper-slide: +bgimage('/img/gallery/'+item+'.jpg')
+            .swiper-gallery-nav
+              .swiper-gallery-nav__prev: +icons('#ic_swiper-prev-white')
+              .swiper-gallery-nav__next: +icons('#ic_swiper-next-white')
+            .swiper-gallery-dots
+
+  section.advantages
+    .advantages__wrp
+      .advantages__bg: +bgimage('/img/common/advantages.jpg')
+      .advantages__content
+        .container
+          .advantages__title Преимущества ЖК Barrin House
+          .advantages__main
+            .advantages__left
+              each item, index in ['SPA центр','Бассейн','Охрана','Детская площадка','Ресторан','Фитнес-центр']
+                .advantages-icon
+                  .advantages-icon__image: +bgimage('/img/advantages/'+index+'.svg')
+                  .advantages-icon__text= item
+            .advantages__right Элитный комплекс ориентирован на самых требовательных и взыскательных жильцов. Для владельцев квартир в Barrin House предусмотрены все удобства вплоть до собственной инфраструктуры. На территории ЖК находится фитнес-клуб с бассейном и комплексом SPA, детский клуб с широким выбором направлений, а также подземный паркинг на три уровня с автомойкой. В округе расположены кафе и рестораны, медицинские центры, торговые комплексы. Рядом находится дворец спорта «Лужники».
+
+  section.videoblock
+    .container
+      .videoblock__title Видео о ЖК Barrin House
+      .videoblock__content
+        +video({
+          'link':'pTeH4KOszFM',
+          'preview':'/img/common/video.jpg',
+        })
+
+  section.presentation
+    .presentation__wrp
+      .presentation__bg: +bgimage('/img/common/presentation-bg.jpg')
+      .presentation__content
+        .presentation-main
+          .presentation-main__left
+            .presentation-main__left-title Презентация ЖК Barrin House
+            .presentation-main__left-desc Расположение корпусов, инфраструктура, планировки и цены на квартиры в жилом комплексе Barrin House в нашей pdf презентации.
+          .presentation-main__right
+            form(action='#' method='POST')
+              .form
+                .form__item: .form__subitem: input(type="text" placeholder="your name")
+                .form__item: .form__subitem: input(type="tel" placeholder="your name")
+                .form__item: .form__subitem: button(class="btn btn-line") Скачать презентацию
+
+
+
 block footer
 
 
