@@ -27,6 +27,10 @@ header {
     &>div {
         margin-right: rem(40);
 
+        @media screen and (max-width: $w580) {
+            margin-right: rem(20);
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -124,10 +128,22 @@ header {
                     align-items: center;
                     border-radius: 50%;
 
+                    @media screen and (max-width: $w580) {
+                        width: rem(38);
+                        min-width: rem(38);
+                        height: rem(38);
+                    }
+
                     & svg {
                         width: rem(15);
                         min-width: rem(15);
                         height: rem(15);
+
+                        @media screen and (max-width: $w580) {
+                            width: rem(18);
+                            min-width: rem(18);
+                            height: rem(18);
+                        }
                     }
                 }
 
@@ -473,6 +489,11 @@ section.section-firstblock {
 
 .section-about {
     padding: 6% 0;
+
+    @media screen and (max-width: $w580) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .about {
@@ -662,6 +683,10 @@ section.section-firstblock {
 
         &--six {
             padding-top: 6%;
+
+            @media screen and (max-width: $w580) {
+                padding-top: 40px;
+            }
         }
     }
 
@@ -694,6 +719,8 @@ section.section-firstblock {
         background-color: rgba($color: #000000, $alpha: 0.87);
         padding: 6% 0 6% rem(182);
 
+
+
         @media screen and (max-width: 1580px) {
             padding: 6% 0 6% rem(100);
         }
@@ -704,6 +731,10 @@ section.section-firstblock {
 
         @media screen and (max-width: $w1024) {
             padding: 6% 0 6% rem(0);
+        }
+
+        @media screen and (max-width: $w580) {
+            padding-top: rem(50);
         }
 
     }
@@ -728,6 +759,10 @@ section.section-firstblock {
 
         @media screen and (max-width: $w1024) {
             padding-top: 6%;
+
+            @media screen and (max-width: $w580) {
+                padding-top: 40px;
+            }
         }
     }
 
@@ -927,6 +962,10 @@ section.section-firstblock {
     @include row-flex;
     align-items: center;
 
+    @media screen and (max-width: $w580) {
+        padding-top: 40px;
+    }
+
     &__desc {
         @include col();
         @include size-w1024(5);
@@ -977,6 +1016,11 @@ section.section-firstblock {
     padding-top: 6%;
     padding-bottom: 6%;
 
+    @media screen and (max-width: $w580) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     & .container {
         max-width: rem(1390);
     }
@@ -1022,7 +1066,9 @@ section.section-firstblock {
 
     &__item {
         @include col();
-        @include size-w1024(4);
+        @include size-w940(4);
+        @include size-w580(6);
+        @include size(12);
 
         margin-bottom: rem(30);
     }
@@ -1088,6 +1134,10 @@ section.section-firstblock {
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: bottom center;
+
+    @media screen and (max-width: $w580) {
+        padding-bottom: 40px;
+    }
 
     &__title {
         @include section-title();
@@ -1239,6 +1289,11 @@ section.section-firstblock {
             display: inline-block;
             padding: 0 10px;
             margin-bottom: rem(20);
+
+            @media screen and (max-width: $w580) {
+                margin-bottom: 25px;
+
+            }
 
 
         }
@@ -1426,6 +1481,11 @@ section.section-firstblock {
     &__title {
         @include section-title;
         padding-bottom: rem(45);
+
+        @media screen and (max-width: $w580) {
+            padding-bottom: rem(0);
+
+        }
     }
 }
 
@@ -1491,6 +1551,10 @@ section.section-firstblock {
     padding-top: 6%;
     background: #000;
 
+    @media screen and (max-width: $w580) {
+        padding-top: 40px;
+    }
+
     & .container {
         max-width: rem(1390);
     }
@@ -1535,6 +1599,11 @@ section.section-firstblock {
 
         padding-top: 6%;
         padding-bottom: 6%;
+
+        @media screen and (max-width: $w580) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
     }
 
     &__left {
@@ -1589,6 +1658,10 @@ section.section-firstblock {
             @include bgimage-contain;
             max-width: rem(96);
             width: 100%;
+
+            @media screen and (max-width: $w580) {
+                max-width: 60px;
+            }
         }
     }
 
@@ -1608,6 +1681,10 @@ section.section-firstblock {
 
     }
 
+    @media screen and (max-width: $w580) {
+        padding-top: 40px;
+    }
+
 
     & .container {
         max-width: rem(1390);
@@ -1617,6 +1694,10 @@ section.section-firstblock {
         @include section-title();
         color: #fff;
         padding-bottom: 6%;
+
+        @media screen and (max-width: $w580) {
+            padding-bottom: 40px;
+        }
 
     }
 
@@ -1779,6 +1860,10 @@ section.section-firstblock {
     &__title {
         @include section-title();
         padding-bottom: 5%;
+
+        @media screen and (max-width: $w1024) {
+            padding-bottom: 9%;
+        }
     }
 
     &__bg {
@@ -1817,6 +1902,13 @@ section.section-firstblock {
         align-items: flex-end;
         position: relative;
 
+        @media screen and (max-width: $w480) {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
 
 
         & .bgimage {
@@ -1845,6 +1937,10 @@ section.section-firstblock {
             line-height: 160.9%;
 
             margin-right: -15%;
+
+            @media screen and (max-width: $w940) {
+                margin-right: -0%;
+            }
         }
 
         &-props {
@@ -1855,6 +1951,10 @@ section.section-firstblock {
 
                 @media screen and (max-width: $w940) {
                     justify-content: center;
+                }
+
+                @media screen and (max-width: $w480) {
+                    flex-direction: column;
                 }
             }
 
@@ -1871,6 +1971,10 @@ section.section-firstblock {
                     font-size: rem(20);
                 }
 
+                @media screen and (max-width: $w480) {
+                    padding-top: rem(20);
+                }
+
                 &:last-child {
                     margin-right: rem(0);
 
@@ -1885,6 +1989,13 @@ section.section-firstblock {
                             width: rem(70);
                             min-width: rem(70);
                             height: rem(70);
+                            margin-right: rem(-45);
+                        }
+
+                        @media screen and (max-width: $w480) {
+                            width: rem(80);
+                            min-width: rem(80);
+                            height: rem(80);
                             margin-right: rem(-45);
                         }
                     }
@@ -1956,6 +2067,16 @@ section.section-firstblock {
         left: 50%;
     }
 
+    @media screen and (max-width: $w480) {
+        left: 0;
+        right: 0;
+        z-index: 111;
+        bottom: 0;
+        transform: none;
+        position: relative;
+        width: 100%;
+    }
+
     &__name {
         font-weight: bold;
         font-size: rem(26);
@@ -1995,6 +2116,10 @@ section.section-firstblock {
     padding-top: 13%;
     padding-bottom: 6%;
 
+    @media screen and (max-width: $w580) {
+        padding-bottom: 40px;
+    }
+
     & .container {
         max-width: rem(1390)
     }
@@ -2012,6 +2137,12 @@ section.section-firstblock {
         align-items: center;
         padding-top: rem(50);
 
+        @media screen and (max-width: $w480) {
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+
         & address {
             font-weight: 500;
             font-size: rem(24);
@@ -2020,6 +2151,11 @@ section.section-firstblock {
             align-items: center;
             color: #0C0C0D;
             font-style: normal;
+
+            @media screen and (max-width: $w1100) {
+                font-size: rem(20);
+
+            }
         }
 
         & svg {
@@ -2027,6 +2163,10 @@ section.section-firstblock {
             min-width: rem(33);
             height: rem(40);
             margin-right: rem(20);
+
+            @media screen and (max-width: $w480) {
+                margin-bottom: rem(15);
+            }
         }
     }
 
@@ -2034,7 +2174,12 @@ section.section-firstblock {
         font-weight: bold;
         font-size: rem(28);
         color: #0C0C0D;
-        padding-top: rem(30)
+        padding-top: rem(30);
+
+        @media screen and (max-width: $w1100) {
+            font-size: rem(28);
+
+        }
     }
 
     &__main {
@@ -2043,12 +2188,12 @@ section.section-firstblock {
 
     &__left {
         @include col();
-        @include size-w1024(4);
+        @include size-w760(4);
     }
 
     &__right {
         @include col();
-        @include size-w1024(8);
+        @include size-w760(8);
     }
 
     &__right {
@@ -2056,9 +2201,21 @@ section.section-firstblock {
         font-size: rem(40);
         line-height: 105.51%;
         color: #0C0C0D;
-
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $w1100) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: $w940) {
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        @media screen and (max-width: $w760) {
+            padding-top: 30px;
+        }
 
         &::before {
             content: '';
@@ -2072,6 +2229,10 @@ section.section-firstblock {
             background-repeat: no-repeat;
             margin-right: rem(10);
             transform: translateX(-100%);
+
+            @media screen and (max-width: $w760) {
+                display: none;
+            }
         }
     }
 }
@@ -2093,7 +2254,7 @@ section.section-firstblock {
             }
 
             @media screen and (max-width: $w360) {
-                height: 144px;
+                height: 220px;
             }
         }
     }
@@ -2126,6 +2287,11 @@ section.section-firstblock {
             min-width: rem(260);
             height: rem(60);
             @include bgimage-contain;
+
+            @media screen and (max-width: $w480) {
+                width: rem(150);
+                min-width: rem(150);
+            }
         }
     }
 
@@ -2143,6 +2309,11 @@ section.section-firstblock {
             padding-top: rem(30);
             font-size: rem(20);
             padding-left: rem(0);
+        }
+
+        @media screen and (max-width: $w480) {
+            font-size: rem(16);
+            line-height: 160%;
         }
 
         & br {
