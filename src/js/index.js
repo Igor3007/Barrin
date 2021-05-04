@@ -104,7 +104,36 @@ var swiper2 = new Swiper('.about__gallery .swiper-container', {
   pagination: {
     el: '.swiper-about-nav__dots',
     clickable: true,
-  }
+  }, 
+
+  breakpoints: {
+    0: {
+      spaceBetween: 15,
+      slidesPerView: 1.2,
+    },
+    359: {
+      spaceBetween: 15,
+      slidesPerView: 1.6,
+    },
+    580: {
+      spaceBetween: 15,
+      slidesPerView: 2,
+    },
+    767: {
+      spaceBetween: 15,
+      slidesPerView: 3,
+    },
+    1024: {
+      spaceBetween: 15,
+      slidesPerView: 2,
+    },
+    1280: {
+      spaceBetween: 40,
+      slidesPerView: 2,
+    },
+  },
+
+  
 
 });
 
@@ -142,6 +171,29 @@ var swiper2 = new Swiper('.sale-department__slider .swiper-container', {
     prevEl: '.swiper-sale-nav__prev',
   },
 
+  breakpoints: {
+    0: {
+      spaceBetween: 5,
+      slidesPerView: 1,
+    },
+    480: {
+      spaceBetween: 5,
+    },
+    
+    580: {
+      spaceBetween: 15,
+    },
+    767: {
+      spaceBetween: 15,
+    },
+    1024: {
+      spaceBetween: 15,
+    },
+    1280: {
+      spaceBetween: 40,
+    },
+  },
+
    
 
 });
@@ -164,9 +216,61 @@ var swiper2 = new Swiper('.gallery-jk__slider .swiper-container', {
   pagination: {
     el: '.swiper-gallery-dots',
     clickable: true,
-  }
+  },
+
+  breakpoints: {
+    0: {
+      spaceBetween: 15,
+    },
+    580: {
+      spaceBetween: 40,
+    },
+    
+  },
 
 });
+
+
+});
+
+ymaps.ready(function () {
+
+  try {
+
+    var point = mapSetting.mapPointCoordinats.split(',');
+
+    var myMap = new ymaps.Map('map-container', {
+        center: point,
+        zoom: 10,
+        controls: []
+      }, {
+        suppressMapOpenBlock: true
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ), 
+
+      myPlacemark = new ymaps.Placemark(point, {
+        hintContent: mapSetting.mapHintContent,
+        balloonContent: mapSetting.mapBaloonContent
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/svg/ic_pen-map.svg',
+        iconImageSize: [60, 60],
+        iconImageOffset: [-30, -60]
+      });
+
+    myMap.geoObjects.add(myPlacemark);
+    myMap.controls.add('zoomControl');
+    myMap.controls.add('fullscreenControl');
+
+  } catch {
+
+    console.error('Нет координат для карты');
+
+  }
 
 
 });

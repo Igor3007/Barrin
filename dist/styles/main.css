@@ -1241,7 +1241,7 @@ section {
 .btn {
   color: #000;
   border: none;
-  padding: 1.6em 3em 1.5em 3em;
+  padding: 1em 3em 1em 3em;
   color: #fff;
   background: #D41367;
   cursor: pointer;
@@ -1252,7 +1252,7 @@ section {
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   letter-spacing: 0.05em;
 }
 
@@ -1281,7 +1281,7 @@ section {
   border: 2px solid #000;
   background: none;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   color: #000;
   border-radius: 0;
 }
@@ -1709,7 +1709,7 @@ section {
   margin: 0 auto;
   position: relative;
   background: #000;
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
   margin-top: 1.25rem;
   max-width: 58.75rem;
@@ -1720,6 +1720,7 @@ section {
   border: none;
   position: relative;
   z-index: 2;
+  display: block;
 }
 
 .video.play {
@@ -1968,203 +1969,6 @@ section {
   transition: 0.3s ease;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.875rem 1.875rem;
-  background-color: #f8f8f8;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-}
-
-.footer--red {
-  background-color: #e2243c;
-  color: #fff;
-}
-
-.footer--red a,
-.footer--red .link-store__desc,
-.footer--red .footer__share-title {
-  color: #fff;
-}
-
-.footer--red .footer__share-list li a {
-  border-color: #fff !important;
-}
-
-.footer--red .link-store__icon svg,
-.footer--red .footer__share-list li a svg {
-  fill: #fff;
-}
-
-.footer--red .link-store {
-  border-color: #fff;
-}
-
-.footer--red .link-store:hover {
-  border-color: #fff;
-}
-
-.footer__app {
-  display: flex;
-}
-
-.footer__app > div:first-child {
-  margin-left: 0;
-}
-
-.footer__apple-store,
-.footer__google-store {
-  margin-left: 0.9375rem;
-  display: flex;
-  align-items: center;
-}
-
-.footer__share-title {
-  font-size: 12px;
-  line-height: 140%;
-  color: #9B9B9B;
-  margin-bottom: 0.625rem;
-}
-
-.link-store {
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  border: 1px solid #b8b8b8;
-  padding: 0.3125rem 1.25rem;
-}
-
-.link-store:hover {
-  border-color: #e2243c;
-}
-
-.link-store__desc {
-  font-size: 12px;
-  line-height: 120%;
-  color: #929292;
-}
-
-.link-store__name {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.link-store__icon {
-  margin-right: 0.9375rem;
-  display: flex;
-  align-items: center;
-}
-
-.link-store svg {
-  fill: #e2243c;
-  width: 1.3125rem;
-  height: 1.3125rem;
-}
-
-.footer__share-list ul {
-  display: flex;
-}
-
-.footer__share-list li {
-  margin-right: 0.625rem;
-}
-
-.footer__share-list li:last-child {
-  margin-right: 0rem;
-}
-
-.footer__share-list li.share-fb a {
-  border-color: #4968AF;
-}
-
-.footer__share-list li.share-fb svg {
-  fill: #4968AF;
-}
-
-.footer__share-list li.share-vk a {
-  border-color: #1378B6;
-}
-
-.footer__share-list li.share-vk svg {
-  fill: #1378B6;
-}
-
-.footer__share-list li.share-tw a {
-  border-color: #1378B6;
-}
-
-.footer__share-list li.share-tw svg {
-  fill: #1378B6;
-}
-
-.footer__share-list li.share-ig a {
-  border-color: #BC3A7C;
-}
-
-.footer__share-list li.share-ig svg {
-  fill: #E52D45;
-}
-
-.footer__share-list li.share-tg a {
-  border-color: #009CCD;
-}
-
-.footer__share-list li.share-tg svg {
-  fill: #009CCD;
-}
-
-.footer__share-list li.share-wa a {
-  border-color: #00A711;
-}
-
-.footer__share-list li.share-wa svg {
-  fill: #00A711;
-}
-
-.footer__share-list li a {
-  background-color: transparent;
-  display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  border: 1px solid transparent;
-}
-
-.footer__share-list li a svg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.footer-develop {
-  background-color: #383838;
-  padding: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-develop a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #5b5b5b;
-}
-
-.footer-develop .bgimage {
-  width: 9.6875rem;
-  height: 0.9375rem;
-  display: inline-block;
-  position: relative;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: block;
-  margin-left: 0.9375rem;
-}
-
 .minicard {
   background-color: #0C0C0D;
   color: #fff;
@@ -2284,7 +2088,6 @@ section {
 }
 
 .minicard__btn .btn {
-  padding: 1.6em 3em 1.6em 3em;
   border-color: #fff;
   color: #fff;
 }
@@ -2331,6 +2134,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 10;
+  padding-left: 1.875rem;
 }
 
 .header-top {
@@ -2350,6 +2154,14 @@ header {
   margin-right: 0;
 }
 
+.header-top__phone a {
+  font-weight: 600;
+  font-size: 1.3125rem;
+  line-height: 1.625rem;
+  color: #000000;
+  white-space: nowrap;
+}
+
 .header-top__logo {
   flex-grow: 1;
 }
@@ -2361,6 +2173,7 @@ header {
   align-items: center;
   color: #000000;
   font-weight: 300;
+  white-space: nowrap;
 }
 
 .header-top__logo a span {
@@ -2369,13 +2182,14 @@ header {
 }
 
 .header-top__menu {
-  width: 24.0625rem;
+  width: 21.75rem;
   display: flex;
   align-items: center;
   background-color: #202020;
   color: #fff;
   height: 100%;
   padding-left: 1.5625rem;
+  font-size: 1.125rem;
 }
 
 .header-top__menu .burger {
@@ -2400,12 +2214,23 @@ header {
   width: 1.5625rem;
   min-width: 1.5625rem;
   height: 1.5625rem;
+  background-color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
 .header-top__msgr ul li a svg {
   width: 0.9375rem;
   min-width: 0.9375rem;
   height: 0.9375rem;
+}
+
+.header-top__btn .btn {
+  font-size: 1.125rem;
+  padding: 0.4em 1.4em 0.4em 1.4em;
+  font-weight: 300;
 }
 
 section.section-firstblock {
@@ -2420,6 +2245,10 @@ section.section-firstblock a {
   position: relative;
 }
 
+.firstblock .container {
+  max-width: 79.375rem;
+}
+
 .firstblock__bg .bgimage {
   display: block;
   padding-top: 55%;
@@ -2430,6 +2259,7 @@ section.section-firstblock a {
   display: block;
   transition: 0.3s ease;
   background-color: #eee;
+  min-height: 760px;
 }
 
 .firstblock__content {
@@ -2467,12 +2297,12 @@ section.section-firstblock a {
 
 .firstblock-one__title h1 {
   font-weight: 700;
-  font-size: 3.25rem;
+  font-size: 3.9375rem;
   line-height: 105.51%;
 }
 
 .firstblock-one__address {
-  margin-bottom: 1.875rem;
+  margin-bottom: 2.1875rem;
 }
 
 .firstblock-one__address address {
@@ -2487,11 +2317,16 @@ section.section-firstblock a {
 .firstblock-one__address svg {
   width: 2.5rem;
   height: 2.5rem;
+  margin-bottom: 0.9375rem;
 }
 
 .firstblock-one__btn {
   padding-top: 14%;
   padding-left: 2.1875rem;
+}
+
+.firstblock-one__dl {
+  max-width: 20rem;
 }
 
 .firstblock-tab__content {
@@ -2521,8 +2356,8 @@ section.section-firstblock a {
   align-items: center;
   justify-content: center;
   height: 5rem;
-  font-size: 23px;
-  line-height: 28px;
+  font-size: 1.4375rem;
+  line-height: 1.75rem;
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: 300;
@@ -2554,6 +2389,8 @@ section.section-firstblock a {
 
 .pink-round-download {
   position: relative;
+  max-width: 350px;
+  width: 100%;
 }
 
 .pink-round-download__round {
@@ -2591,6 +2428,9 @@ section.section-firstblock a {
 
 .pink-round-download__image svg {
   margin-top: 5px;
+  width: 1.875rem;
+  min-width: 1.875rem;
+  height: 1.875rem;
 }
 
 .section-about {
@@ -2608,11 +2448,7 @@ section.section-firstblock a {
 
 .about__desc {
   padding-right: 2.5rem;
-}
-
-.about__desc-logo {
-  max-width: 35rem;
-  margin-left: auto;
+  padding-left: 1.875rem;
 }
 
 .about__desc-logo .bgimage {
@@ -2633,8 +2469,6 @@ section.section-firstblock a {
   color: #343434;
   display: flex;
   align-items: center;
-  max-width: 35rem;
-  margin-left: auto;
   padding-top: 2.1875rem;
 }
 
@@ -2651,11 +2485,16 @@ section.section-firstblock a {
 }
 
 .about__desc-text {
-  max-width: 35rem;
-  margin-left: auto;
   padding-top: 2.1875rem;
   font-size: 1.125rem;
   line-height: 140%;
+}
+
+.about__desc-logo,
+.about__desc-title,
+.about__desc-text {
+  max-width: 35rem;
+  margin-left: auto;
 }
 
 .about-card__image {
@@ -2860,7 +2699,7 @@ section.section-firstblock a {
   align-items: center;
   justify-content: center;
   height: 5rem;
-  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 28px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -2876,7 +2715,7 @@ section.section-firstblock a {
   width: 33.3%;
   height: 4px;
   display: block;
-  bottom: -3px;
+  bottom: -1px;
   left: 0;
   background: #D41367;
   transition: 0.4s ease;
@@ -2938,6 +2777,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .infrastructure-item__right {
@@ -2945,6 +2785,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .infrastructure-item__title {
@@ -3000,6 +2841,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .infrastructur-plan__image {
@@ -3007,6 +2849,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .infrastructur-plan__image .bgimage {
@@ -3187,6 +3030,10 @@ section.section-firstblock a {
   margin-right: 0.625rem;
 }
 
+.sale-department__form {
+  padding-top: 2.5rem;
+}
+
 .sale-department__desc {
   font-size: 1.625rem;
   line-height: 150%;
@@ -3198,6 +3045,7 @@ section.section-firstblock a {
   padding-top: 5%;
   padding-bottom: 8%;
   margin: 0 2.5rem;
+  position: relative;
 }
 
 .specialist__photo {
@@ -3231,7 +3079,7 @@ section.section-firstblock a {
 
 .specialist__name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 160.9%;
   text-align: center;
   color: #0C0C0D;
@@ -3241,7 +3089,7 @@ section.section-firstblock a {
 
 .specialist__post {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160.9%;
   text-align: center;
   color: #0C0C0D;
@@ -3270,7 +3118,7 @@ section.section-firstblock a {
 
 .department-form__msgr-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 160.9%;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -3335,10 +3183,6 @@ section.section-firstblock a {
   box-shadow: none;
 }
 
-.department-form__fields .form__subitem {
-  max-width: 16.875rem;
-}
-
 .department-form__fields .form__subitem:last-child {
   max-width: none;
 }
@@ -3350,7 +3194,7 @@ section.section-firstblock a {
   width: 100%;
   z-index: 5;
   top: 50%;
-  margin-top: -1.875rem;
+  margin-top: -3.125rem;
 }
 
 .swiper-sale-nav svg {
@@ -3361,6 +3205,21 @@ section.section-firstblock a {
 
 .swiper-sale-nav #ic_swiper-next-fill path {
   stroke: #fff;
+}
+
+.swiper-sale-nav__prev {
+  transform: translateX(-30px);
+}
+
+.swiper-sale-nav__next {
+  transform: translateX(30px);
+}
+
+.swiper-sale-nav__prev svg,
+.swiper-sale-nav__next svg {
+  fill: #ccc;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .gallery-jk {
@@ -3446,6 +3305,7 @@ section.section-firstblock a {
   left: 0;
   right: 0;
   z-index: 2;
+  justify-content: center;
 }
 
 .swiper-gallery-nav > div {
@@ -3527,7 +3387,6 @@ section.section-firstblock a {
   left: 0;
   right: 0;
   z-index: 1;
-  padding-left: 11.375rem;
 }
 
 .advantages__bg .bgimage {
@@ -3569,6 +3428,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .advantages__right {
@@ -3576,6 +3436,7 @@ section.section-firstblock a {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(100% - 30px);
 }
 
 .advantages__left {
@@ -3619,6 +3480,7 @@ section.section-firstblock a {
 .videoblock {
   background-color: #000;
   padding-top: 6%;
+  overflow: visible;
 }
 
 .videoblock .container {
@@ -3647,6 +3509,10 @@ section.section-firstblock a {
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 0.625rem;
+}
+
+.videoblock__content {
+  position: relative;
 }
 
 .presentation {
@@ -3690,8 +3556,465 @@ section.section-firstblock a {
 .presentation__content {
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 3.75rem;
+}
+
+.presentation-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.presentation-main__right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 30px);
+}
+
+.presentation-main__right .bgimage {
+  padding-top: 70%;
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transform: rotate(-16deg);
+  margin-top: -4%;
+  margin-right: -25%;
+}
+
+.presentation-main__left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.presentation-main__left-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3125rem;
+  line-height: 105.51%;
+  color: #343434;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  line-height: 135%;
+  align-items: flex-start;
+}
+
+.presentation-main__left-title::before {
+  content: '';
+  width: 1.875rem;
+  height: 1.15em;
+  background-image: url("/img/svg/ic_slash.svg");
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0.625rem;
+}
+
+.presentation-main__left-desc {
+  padding-top: 3.75rem;
+  font-size: 1.25rem;
+  line-height: 160.9%;
+  margin-right: auto;
+}
+
+.presentation-main__left-form {
+  padding-top: 3.75rem;
+}
+
+.presentation-main__left-form .btn {
+  border-color: #fff;
+  color: #fff;
+  width: 100%;
+}
+
+.presentation-main__left-form .form__item input {
+  background-color: transparent;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mortgage {
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mortgage__wrp {
+  position: relative;
+  margin-left: auto;
+}
+
+.mortgage__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3125rem;
+  line-height: 105.51%;
+  color: #343434;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+.mortgage__title::before {
+  content: '';
+  width: 1.875rem;
+  height: 1.15em;
+  background-image: url("/img/svg/ic_slash.svg");
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0.625rem;
+}
+
+.mortgage__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.mortgage__bg .bgimage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transition: 0.3s ease;
+  background-color: #eee;
+  height: 100%;
+}
+
+.mortgage__content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mortgage .container {
+  max-width: 86.875rem;
+}
+
+.mortgage-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.mortgage-main__right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 30px);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.mortgage-main__right .bgimage {
+  padding-top: 130%;
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  background-position: bottom center;
+  width: 100%;
+  margin-top: -15%;
+}
+
+.mortgage-main__left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 30px);
+  padding: 3.75rem 0;
+}
+
+.mortgage-main__left-desc {
+  padding-top: 0rem;
+  font-size: 1.25rem;
+  line-height: 160.9%;
+  margin-right: -15%;
+}
+
+.mortgage-main__left-props {
+  padding-top: 1.875rem;
+}
+
+.mortgage-main__left-props ul {
+  display: flex;
+}
+
+.mortgage-main__left-props li {
+  display: flex;
+  align-items: center;
+  margin-right: 2.5rem;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 160.9%;
+}
+
+.mortgage-main__left-props li:last-child {
+  margin-right: 0rem;
+}
+
+.mortgage-main__left-props li:last-child::before {
+  content: '';
+  width: 6.25rem;
+  min-width: 6.25rem;
+  height: 6.25rem;
+  margin-right: -3.4375rem;
+}
+
+.mortgage-main__left-props li::before {
+  content: '';
+  width: 8.125rem;
+  min-width: 8.125rem;
+  height: 8.125rem;
+  display: inline-block;
+  border: 3px solid #D41367;
+  border-radius: 50%;
+  margin-right: -4.0625rem;
+}
+
+.mortgage-main__left-form {
+  padding-top: 2.5rem;
+  max-width: 31.25rem;
+  margin-right: auto;
+}
+
+.mortgage-main__left-form .btn {
+  border-color: #fff;
+  color: #fff;
+  width: 100%;
+}
+
+.mortgage-main__left-form .form__item input {
+  background-color: transparent;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mortgage-spec {
+  background-color: #000;
+  position: absolute;
+  padding: 0.3125rem 1.25rem;
+  left: 0;
+  bottom: 3.75rem;
+  transform: translateX(-100%);
+}
+
+.mortgage-spec__name {
+  font-weight: bold;
+  font-size: 1.625rem;
+  line-height: 160.9%;
+  text-align: right;
+}
+
+.mortgage-spec__post {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 160.9%;
+  text-align: right;
+}
+
+.section-contacts {
+  background-color: #E9E9E9;
+  background-size: 100% auto;
+  background-position: center -10px;
+  background-repeat: no-repeat;
+  padding-top: 13%;
+  padding-bottom: 6%;
+}
+
+.section-contacts .container {
+  max-width: 86.875rem;
+}
+
+.contacts__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.3125rem;
+  line-height: 105.51%;
+  color: #343434;
+  display: flex;
+  align-items: center;
+}
+
+.contacts__title::before {
+  content: '';
+  width: 1.875rem;
+  height: 1.15em;
+  background-image: url("/img/svg/ic_slash.svg");
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0.625rem;
+}
+
+.contacts__address {
+  display: flex;
+  align-items: center;
+  padding-top: 3.125rem;
+}
+
+.contacts__address address {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 105.51%;
+  display: flex;
+  align-items: center;
+  color: #0C0C0D;
+  font-style: normal;
+}
+
+.contacts__address svg {
+  width: 2.0625rem;
+  min-width: 2.0625rem;
+  height: 2.5rem;
+  margin-right: 1.25rem;
+}
+
+.contacts__phone {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #0C0C0D;
+  padding-top: 1.875rem;
+}
+
+.contacts__main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.contacts__left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.contacts__right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.contacts__right {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 105.51%;
+  color: #0C0C0D;
+  display: flex;
+  align-items: center;
+}
+
+.contacts__right::before {
+  content: '';
+  width: 3.0625rem;
+  min-width: 3.0625rem;
+  height: 6.5625rem;
+  background-image: url("/img/svg/ic_slash-black.svg");
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0.625rem;
+  transform: translateX(-100%);
+}
+
+.section-maps__map span {
+  display: block;
+  height: 500px;
+}
+
+#map-container .ymaps-2-1-78-ground-pane {
+  filter: grayscale(1);
+}
+
+.footer {
+  background-color: #0C0C0D;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.footer .container {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  max-width: 86.875rem;
+}
+
+.footer__logo .bgimage {
+  width: 16.25rem;
+  min-width: 16.25rem;
+  height: 3.75rem;
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.footer__text {
+  padding-left: 3.75rem;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 132%;
+  display: flex;
+  align-items: center;
+  color: #F4F4F4;
+}
+
+@media screen and (min-width: 940px) {
+  .department-form__fields .form__subitem {
+    max-width: 16.875rem;
+  }
+
+  .presentation-main__right {
+    width: calc(66.66667% - 30px);
+  }
+
+  .presentation-main__left {
+    width: calc(33.33333% - 30px);
+  }
+
+  .mortgage-main__right {
+    width: calc(37.5% - 30px);
+  }
+
+  .mortgage-main__left {
+    width: calc(62.5% - 30px);
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -3719,6 +4042,10 @@ section.section-firstblock a {
     width: calc(33.33333% - 30px);
   }
 
+  .advantages__bg {
+    padding-left: 11.375rem;
+  }
+
   .advantages__left {
     width: calc(50% - 30px);
   }
@@ -3726,11 +4053,81 @@ section.section-firstblock a {
   .advantages__right {
     width: calc(50% - 30px);
   }
+
+  .videoblock__content {
+    top: 6.25rem;
+    margin-top: -6.25rem;
+  }
+
+  .contacts__left {
+    width: calc(33.33333% - 30px);
+  }
+
+  .contacts__right {
+    width: calc(66.66667% - 30px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .presentation-main__right {
+    width: calc(75% - 30px);
+  }
+
+  .presentation-main__left {
+    width: calc(25% - 30px);
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .infrastructure__content {
+    padding: 6% 0 6% 6.25rem;
+  }
 }
 
 @media screen and (max-width: 1440px) {
   html {
     font-size: 15px;
+  }
+
+  .firstblock-one__title h1 {
+    font-size: 3.25rem;
+    line-height: 130%;
+  }
+
+  .firstblock-one__dl {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .firstblock-tab__content {
+    padding-top: 6%;
+  }
+
+  .department-form {
+    flex-direction: column;
+  }
+
+  .department-form__msgr {
+    margin-bottom: 1.5625rem;
+  }
+}
+
+@media screen and (max-width: 1376px) {
+  .header-top__menu {
+    width: 10rem;
+  }
+
+  .about-card__content {
+    padding: 1.875rem;
+  }
+
+  .about-card__title {
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+
+  .about-card__btn .btn {
+    font-size: 0.875rem !important;
   }
 }
 
@@ -3746,15 +4143,47 @@ section.section-firstblock a {
   .minicard__props {
     font-size: 13px;
   }
+
+  .infrastructure__content {
+    padding: 6% 0 6% 1.875rem;
+  }
+
+  .mortgage-main__left-props li {
+    font-size: 1.25rem;
+  }
+
+  .mortgage-main__left-props li:last-child::before {
+    width: 4.375rem;
+    min-width: 4.375rem;
+    height: 4.375rem;
+    margin-right: -2.8125rem;
+  }
+
+  .mortgage-main__left-props li::before {
+    width: 5rem;
+    min-width: 5rem;
+    height: 5rem;
+    margin-right: -2.8125rem;
+  }
+
+  .mortgage-spec__name {
+    font-size: 1.125rem;
+  }
+
+  .mortgage-spec__post {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .mortgage-spec {
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (max-width: 1025px) {
   .container {
     padding: 0 1.5625rem;
-  }
-
-  .btn {
-    padding: 1.5em 3em;
   }
 
   .form input {
@@ -3784,6 +4213,91 @@ section.section-firstblock a {
 
   .minicard__rub {
     font-size: 14px;
+  }
+
+  .header-top__logo a {
+    font-size: 0;
+  }
+
+  .header-top__logo a span {
+    font-size: 1.4375rem;
+    padding-left: 0;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about > div {
+    width: 100%;
+  }
+
+  .about__desc {
+    margin-bottom: 2.5rem;
+  }
+
+  .about__desc-logo,
+  .about__desc-title,
+  .about__desc-text {
+    max-width: 100%;
+    margin-left: auto;
+  }
+
+  .infrastructure__title {
+    padding-left: 1.875rem;
+  }
+
+  .infrastructure__content {
+    padding: 6% 0 6% 0rem;
+  }
+
+  .infrastructure-tab__content {
+    padding-top: 6%;
+  }
+
+  .swiper-infrastructure-nav {
+    padding-top: 35px;
+  }
+
+  .infrastructure-item__left {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .infrastructur-plan__image {
+    max-width: 43.75rem;
+    margin: 0 auto;
+  }
+
+  .infrastructur-plan__desc {
+    padding-top: 2.8125rem;
+  }
+
+  .infrastructur-plan__desc-wrp {
+    max-width: 100%;
+    padding: 0 1.875rem;
+  }
+
+  .advantages__left {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .advantages__right {
+    padding-top: 2.8125rem;
+    font-size: 1.25rem;
+  }
+
+  .videoblock {
+    padding-bottom: 3.4375rem;
+  }
+
+  .presentation {
+    padding-top: 0;
+  }
+
+  .section-maps__map span {
+    height: 420px;
   }
 }
 
@@ -3820,6 +4334,131 @@ section.section-firstblock a {
   .minicard__rub {
     font-size: 14px;
   }
+
+  .header-top__btn {
+    display: none;
+  }
+
+  .firstblock__bg .bgimage {
+    height: 100%;
+  }
+
+  .firstblock__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 0%;
+  }
+
+  .firstblock__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .firstblock-one {
+    flex-direction: column-reverse;
+  }
+
+  .firstblock-one__left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .firstblock-one__right {
+    width: 100%;
+    padding-left: 0rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .firstblock-one__address {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .firstblock-one__btn {
+    padding-top: 7%;
+    padding-left: 0;
+  }
+
+  .firstblock-one__dl {
+    max-width: 16.875rem;
+    padding-bottom: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .pink-round-download__image .dl-text {
+    font-size: 0.875rem;
+  }
+
+  .pink-round-download__image svg {
+    display: none;
+  }
+
+  .department-form__msgr {
+    padding-right: 0rem;
+  }
+
+  .presentation-main {
+    flex-direction: column-reverse;
+  }
+
+  .presentation-main__right .bgimage {
+    transform: rotate(0);
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .presentation-main__left-title br {
+    display: none;
+  }
+
+  .presentation-main__left-desc br {
+    display: none;
+  }
+
+  .mortgage-main__right .bgimage {
+    margin-top: -0%;
+    padding-top: 80%;
+  }
+
+  .mortgage-main__left-props ul {
+    justify-content: center;
+  }
+
+  .mortgage-main__left-form {
+    margin-left: auto;
+  }
+
+  .mortgage-spec {
+    left: 50%;
+  }
+
+  .mortgage-spec__name {
+    text-align: center;
+  }
+
+  .mortgage-spec__post {
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer__text {
+    text-align: center;
+    padding-top: 1.875rem;
+    font-size: 1.25rem;
+    padding-left: 0rem;
+  }
+
+  .footer__text br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -3851,23 +4490,6 @@ section.section-firstblock a {
     font-size: 1.125rem;
   }
 
-  .footer {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .footer__share {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .footer__share-title {
-    padding-top: 1.5625rem;
-  }
-
   .minicard__props {
     font-size: 13px;
   }
@@ -3878,6 +4500,105 @@ section.section-firstblock a {
 
   .minicard__rub {
     font-size: 14px;
+  }
+
+  .header-top__menu {
+    font-size: 0;
+    width: 5.3125rem;
+  }
+
+  .firstblock-one__title h1 {
+    font-size: 3rem;
+  }
+
+  .firstblock-tab__nav ul li a {
+    font-size: 1.25rem;
+    font-weight: 400;
+    height: 4.375rem;
+  }
+
+  .about__desc-title {
+    font-size: 1.875rem;
+  }
+
+  .infrastructure__title {
+    font-size: 1.875rem;
+  }
+
+  .infrastructure-tab__nav {
+    overflow-x: auto;
+  }
+
+  .infrastructure-tab__nav ul li a {
+    font-size: 1.25rem;
+    font-weight: 400;
+    height: 4.375rem;
+    padding: 0 15px;
+    white-space: nowrap;
+  }
+
+  .section-apartments__title {
+    font-size: 1.875rem;
+  }
+
+  .sale-department__title {
+    font-size: 1.875rem;
+  }
+
+  .specialist__name {
+    font-size: 1rem;
+    transform: translateY(-30px);
+  }
+
+  .specialist__post {
+    font-size: 0.875rem;
+    transform: translateY(-30px);
+  }
+
+  .gallery-jk__title {
+    font-size: 1.875rem;
+  }
+
+  .swiper-gallery-nav svg {
+    width: 1.875rem;
+    min-width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .advantages__title {
+    font-size: 1.875rem;
+  }
+
+  .videoblock__title {
+    font-size: 1.875rem;
+  }
+
+  .presentation-main__left-title {
+    font-size: 1.875rem;
+  }
+
+  .mortgage__title {
+    font-size: 1.875rem;
+  }
+
+  .contacts__title {
+    font-size: 1.875rem;
+  }
+
+  .section-maps__map span {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .specialist__name {
+    font-size: 0.875rem;
+    transform: translateY(-30px);
+  }
+
+  .specialist__post {
+    font-size: 0.75rem;
+    transform: translateY(-30px);
   }
 }
 
@@ -3941,6 +4662,93 @@ section.section-firstblock a {
   .minicard__rub {
     font-size: 15px;
   }
+
+  header {
+    padding-left: 1.25rem;
+  }
+
+  .header-top__phone {
+    display: none;
+  }
+
+  .firstblock-one__left {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .firstblock-one__title h1 {
+    font-size: 2.375rem;
+  }
+
+  .firstblock-one__address address {
+    line-height: 130%;
+  }
+
+  .firstblock-one__btn {
+    display: none;
+  }
+
+  .firstblock-one__dl {
+    margin-right: -4%;
+  }
+
+  .firstblock-tab .line {
+    height: 2px;
+    bottom: -2px;
+  }
+
+  .about__desc {
+    padding-left: 1.25rem;
+  }
+
+  .about__desc-title {
+    font-size: 1.875rem;
+  }
+
+  .infrastructure__title {
+    font-size: 1.875rem;
+  }
+
+  .section-apartments__title {
+    font-size: 1.875rem;
+  }
+
+  .sale-department__title {
+    font-size: 1.875rem;
+  }
+
+  .sale-department__desc {
+    font-size: 1.25rem;
+  }
+
+  .gallery-jk__title {
+    font-size: 1.875rem;
+  }
+
+  .advantages__title {
+    font-size: 1.875rem;
+  }
+
+  .videoblock__title {
+    font-size: 1.875rem;
+  }
+
+  .presentation__content {
+    padding: 1.875rem;
+  }
+
+  .presentation-main__left-title {
+    font-size: 1.875rem;
+  }
+
+  .mortgage__title {
+    font-size: 1.875rem;
+  }
+
+  .contacts__title {
+    font-size: 1.875rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -3957,20 +4765,36 @@ section.section-firstblock a {
     height: 3.75rem;
   }
 
-  .footer {
-    padding: 1.875rem 0.9375rem;
+  .firstblock-one__title h1 {
+    font-size: 2rem;
   }
 
-  .link-store__desc {
-    font-size: 11px;
+  .firstblock-tab__nav ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 3.75rem;
   }
 
-  .link-store__name {
-    font-size: 13px;
+  .infrastructure-tab__nav ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 3.75rem;
   }
 
-  .link-store__icon {
-    margin-right: 0.625rem;
+  .specialist__name {
+    font-size: 1.125rem;
+  }
+
+  .specialist__post {
+    font-size: 0.875rem;
+  }
+
+  .department-form__fields .btn {
+    font-size: 14px;
+  }
+
+  .swiper-sale-nav {
+    margin-top: -22px;
   }
 }
 
@@ -3990,6 +4814,14 @@ section.section-firstblock a {
 
   .minicard__rub {
     font-size: 13px;
+  }
+
+  .department-form__fields .btn {
+    font-size: 12px;
+  }
+
+  .section-maps__map span {
+    height: 144px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

@@ -182,9 +182,9 @@ block content
                   .specialist__photo: +bgimage('/img/common/u'+item+'.png')
                   .specialist__name Имя Фамилия
                   .specialist__post Должность
-          .swiper-sale-nav
-            .swiper-sale-nav__prev: +icons('#ic_swiper-prev-fill')
-            .swiper-sale-nav__next: +icons('#ic_swiper-next-fill')
+        .swiper-sale-nav
+          .swiper-sale-nav__prev: +icons('#ic_swiper-prev-fill')
+          .swiper-sale-nav__next: +icons('#ic_swiper-next-fill')
       .sale-department__form
         form(action='#' method='POST')
           .department-form
@@ -265,18 +265,70 @@ block content
       .presentation__content
         .presentation-main
           .presentation-main__left
-            .presentation-main__left-title Презентация ЖК Barrin House
-            .presentation-main__left-desc Расположение корпусов, инфраструктура, планировки и цены на квартиры в жилом комплексе Barrin House в нашей pdf презентации.
+            .presentation-main__left-title Презентация <br> ЖК Barrin House
+            .presentation-main__left-desc Расположение корпусов,<br> инфраструктура,<br> планировки и цены<br> на квартиры в жилом<br> комплексе Barrin House<br> в нашей pdf презентации.
+            .presentation-main__left-form
+              form(action='#' method='POST')
+                .form
+                  .form__item: .form__subitem: input(type="text" placeholder="your name")
+                  .form__item: .form__subitem: input(type="tel" placeholder="your name")
+                  .form__item: .form__subitem: button(class="btn btn-line") Скачать презентацию
           .presentation-main__right
-            form(action='#' method='POST')
-              .form
-                .form__item: .form__subitem: input(type="text" placeholder="your name")
-                .form__item: .form__subitem: input(type="tel" placeholder="your name")
-                .form__item: .form__subitem: button(class="btn btn-line") Скачать презентацию
+            +bgimage('/img/common/presentation-hd.png')
+
+  section.mortgage
+    .container
+      .mortgage__title Ипотека
+    .mortgage__wrp
+      .mortgage__bg: +bgimage('/img/common/mortgage-bg.jpg')
+      .mortgage__content
+        .container
+          .mortgage-main
+            .mortgage-main__left
+              .mortgage-main__left-desc Подайте заявку на ипотеку и получите решение сразу из нескольких банков партнёров.
+              .mortgage-main__left-props
+                ul
+                  li Ставка от 5.99%
+                  li Решение за 72 часа
+              .mortgage-main__left-form
+                form(action='#' method='POST')
+                  .form
+                    .form__item: .form__subitem: input(type="text" placeholder="your name")
+                    .form__item: .form__subitem: input(type="tel" placeholder="your name")
+                    .form__item: .form__subitem: button(class="btn btn-line") одобрить заявку
+            .mortgage-main__right
+              +bgimage('/img/common/mortgage-spec.jpg')
+              .mortgage-spec
+                .mortgage-spec__name Имя Фамилия
+                .mortgage-spec__post специалист по кредитованию
+
+  section.section-contacts(style="background-image: url(/img/common/contacts-bg.svg)")
+    .container
+      .contacts
+        .contacts__title Контакты
+        .contacts__main
+          .contacts__left
+            .contacts__address
+              +icons('#ic_pen-black')
+              address Москва, ул. Малая Пироговская, вл. 8
+            .contacts__phone +7 (495) 085-16-64
+          .contacts__right Barrin House — жилой комплекс c квартирами в Хамовниках
+
+  section.section-maps(id="map")
+
+    script
+      include ../js/mapsetting.js
+
+    .section-maps__map
+      span(id="map-container" style="background-color: #eee;")
 
 
 
 block footer
+  .footer
+    .container
+      .footer__logo: +bgimage('/img/svg/donstroy.svg')
+      .footer__text «Донстрой» – крупнейший девелопер Москвы. <br> Одна из самых стабильных компаний на рынке недвижимости Москвы.  <br>Мы работаем с 1994 года, и за это время построили целый город!
 
 
 
