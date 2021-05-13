@@ -28,6 +28,26 @@ block header
 
 block content
 
+  mixin tabone()
+    .firstblock-one
+      .firstblock-one__left
+        .firstblock-one__address
+          +icons('#ic_pen')
+          address Москва, ул. Малая Пироговская, вл. 8 
+        .firstblock-one__dl
+          a(href='#')
+            .pink-round-download
+              .pink-round-download__round
+              .pink-round-download__image
+                +bgimage('/img/common/presentation.png')
+                span.dl-text Скачать <br> презентацию
+                +icons('#ic_dl') Скачать презентацию
+      .firstblock-one__right
+        .firstblock-one__title: h1 Barrin House — жилой комплекс c квартирами в Хамовниках
+        .firstblock-one__btn
+          a(href='#'): button.btn.btn-line Подробнее
+
+
   section.section-firstblock
     .firstblock
       .firstblock__bg: +bgimage('/img/common/first-bg.jpg')
@@ -41,26 +61,9 @@ block content
                 li: a(href="#") Галерея
               .line
             .firstblock-tab__content
-              .firstblock-tab__item.active
-                .firstblock-one
-                  .firstblock-one__left
-                    .firstblock-one__address
-                      +icons('#ic_pen')
-                      address Москва, ул. Малая Пироговская, вл. 8 
-                    .firstblock-one__dl
-                      a(href='#')
-                        .pink-round-download
-                          .pink-round-download__round
-                          .pink-round-download__image
-                            +bgimage('/img/common/presentation.png')
-                            span.dl-text Скачать <br> презентацию
-                            +icons('#ic_dl') Скачать презентацию
-                  .firstblock-one__right
-                    .firstblock-one__title: h1 Barrin House — жилой комплекс c квартирами в Хамовниках
-                    .firstblock-one__btn
-                      a(href='#'): button.btn.btn-line Подробнее
-              .firstblock-tab__item tab2
-              .firstblock-tab__item tab3
+              .firstblock-tab__item.active: +tabone()
+              .firstblock-tab__item: +tabone()
+              .firstblock-tab__item: +tabone()
 
 
   section.section-about
@@ -169,6 +172,9 @@ block content
                 .catalog__pagination__next: a(href="#")= '>'
                 .catalog__pagination__count 3 страницы
 
+    script
+      include ../js/catalog.js
+
   section.sale-department(style="background-image: url(/img/common/sale-bg.svg)")
     .container
       .sale-department__title Отдел продаж в ЖК Barrin House
@@ -214,8 +220,8 @@ block content
             .department-form__fields
               .form
                 .form__item
-                  .form__subitem: input(type="text" placeholder="Your name")
-                  .form__subitem: input(type="tex" placeholder="Your name")
+                  .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__subitem: input(type="tel" placeholder="Ваш телефон")
                   .form__subitem
                     button.btn.btn-line(type="submit") записаться на экскурсию
 
@@ -270,8 +276,8 @@ block content
             .presentation-main__left-form
               form(action='#' method='POST')
                 .form
-                  .form__item: .form__subitem: input(type="text" placeholder="your name")
-                  .form__item: .form__subitem: input(type="tel" placeholder="your name")
+                  .form__item: .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__item: .form__subitem: input(type="tel" placeholder="Ваш телефон")
                   .form__item: .form__subitem: button(class="btn btn-line") Скачать презентацию
           .presentation-main__right
             +bgimage('/img/common/presentation-hd.png')
@@ -293,8 +299,8 @@ block content
               .mortgage-main__left-form
                 form(action='#' method='POST')
                   .form
-                    .form__item: .form__subitem: input(type="text" placeholder="your name")
-                    .form__item: .form__subitem: input(type="tel" placeholder="your name")
+                    .form__item: .form__subitem: input(type="text" placeholder="Ваше имя")
+                    .form__item: .form__subitem: input(type="tel" placeholder="Ваш телефон")
                     .form__item: .form__subitem: button(class="btn btn-line") одобрить заявку
             .mortgage-main__right
               +bgimage('/img/common/mortgage-spec.jpg')
@@ -334,4 +340,4 @@ block footer
 
 block scripts
   script(src="js/main.js?v=1.52")
-  script(src="js/vendor.js")
+  script(src="js/vendor.js") 

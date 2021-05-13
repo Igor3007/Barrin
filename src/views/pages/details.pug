@@ -1,0 +1,150 @@
+extends ../layouts/index
+include ../../blocks/components/video/video
+include ../../blocks/components/faq/faq.pug
+include ../../blocks/modules/minicard/minicard.pug
+
+block variables
+  include ../../data/data.pug
+
+
+
+block header
+  .header-top
+    .header-top__logo: a(href='#') Жилой комплекс / <span> Barrin House </span>
+    .header-top__msgr
+      ul
+        li: a(href='#'): +icons('#ic_wa')
+        li: a(href='#'): +icons('#ic_tg')
+    .header-top__phone
+      a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
+    .header-top__btn
+      button.btn.btn-line.btn-small Заказать звонок
+    .header-top__menu
+      .burger
+        i
+        i
+        i
+      | Меню
+
+block content
+
+
+
+
+  section.section-details-main
+    .details-main
+      .details-main__bg: +bgimage('/img/common/details-bg.jpg')
+      .details-main__content
+        .container
+          .details-data
+            .details-data__head
+              .details-data__address
+                +icons('#ic_pen', 33)
+                address Москва, ул. Малая Пироговская, вл. 8 
+              .details-data__title
+                h1 Квартира в ЖК «Barrin House»
+            .details-data__main
+              .details-data__main-present
+                .pink-round-download
+                  .pink-round-download__round
+                  .pink-round-download__image
+                    +bgimage('/img/common/presentation.png')
+                    span.dl-text Скачать <br> презентацию
+                    +icons('#ic_dl') Скачать презентацию
+              .details-data__main-cost
+                .details-data__main-wrp
+                  .details-data__usd 2 629 879 $
+                  .details-data__rub 184 091 513 ₽
+                ul
+                  li 
+                    span.props-name  Площадь квартиры:	 
+                    span.props-val 122.93 кв. м
+                  li 
+                    span.props-name  Кол-во комнат:	 
+                    span.props-val 2
+                  li 
+                    span.props-name  Этаж:	 
+                    span.props-val 4
+                  li 
+                    span.props-name  Метро: 
+                    span.props-val Фрунзенская
+                  li 
+                    span.props-name  Район: 
+                    span.props-val Хамовники
+                button.btn.btn-line.btn-white ОСТАВИТЬ ЗАЯВКУ
+
+              .details-data__main-id
+                span ID
+                span 2664862
+
+  section.section-about
+    .about
+      .about__desc
+        .about__desc-logo: +bgimage('/img/common/logo-barrin.svg')
+        .about__desc-title О ЖК Barrin House
+        .about__desc-text В исторически значимом центре Москвы, в окружении зеленых парков и исторических зданий расположился новый жилой комплекс "Barrin House", Дом на Малой Пироговской». Район Хамовники. Ближайшее метро Фрунзенское всего в пяти минутах ходьбы от жилого комплекса. Недалеко от места застройки памятники архитектуры: Усадьба Трубецких в Хамовниках, Новодевичий монастырь, и парковая зона - сквер Девичьего поля. Монолитно-кирпичное жилое здание разной этажности относится к категории премиум-класса. Одно, двух и трех комнатные квартиры в ЖК "Barrin House", Дом на Малой Пироговской» предлагаются площадью от 58,4 до 394,3 кв.м. 
+
+      .about__gallery-details
+        .swiper-container
+          .swiper-wrapper
+            each item, index in [1,2,3,4,5]
+              .swiper-slide
+                .about-card-details
+                  .about-card-details__image: +bgimage('/img/about/'+index+'.jpg')
+
+          .swiper-about-nav
+            .swiper-about-nav__prev: +icons('#ic_swiper-prev')
+            .swiper-about-nav__dots
+            .swiper-about-nav__next: +icons('#ic_swiper-next')
+
+
+  section.section-gallery-details
+    .container gallery
+
+  section.presentation
+    .presentation__wrp
+      .presentation__bg: +bgimage('/img/common/')
+      .presentation__content
+        .presentation-main
+          .presentation-main__left
+            .presentation-main__left-title Презентация <br> ЖК Barrin House
+            .presentation-main__left-desc Расположение корпусов,<br> инфраструктура,<br> планировки и цены<br> на квартиры в жилом<br> комплексе Barrin House<br> в нашей pdf презентации.
+            .presentation-main__left-form
+              form(action='#' method='POST')
+                .form
+                  .form__item: .form__subitem: input(type="text" placeholder="Ваше имя")
+                  .form__item: .form__subitem: input(type="tel" placeholder="Ваш телефон")
+                  .form__item: .form__subitem: button(class="btn btn-line") Скачать презентацию
+          .presentation-main__right
+            +bgimage('/img/common/presentation-hd.png')
+
+  section.videoblock
+    .container
+      .videoblock__title Видео о ЖК Barrin House
+      .videoblock__content
+        +video({
+          'link':'pTeH4KOszFM',
+          'preview':'/img/common/video.jpg',
+        }) 
+
+  section.section-form-details
+    .container form
+
+  section.section-similar-details
+    .container similar
+
+
+
+
+
+block footer
+  .footer
+    .container
+      .footer__logo: +bgimage('/img/svg/donstroy.svg')
+      .footer__text «Донстрой» – крупнейший девелопер Москвы. <br> Одна из самых стабильных компаний на рынке недвижимости Москвы.  <br>Мы работаем с 1994 года, и за это время построили целый город!
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

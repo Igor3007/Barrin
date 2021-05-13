@@ -2061,77 +2061,75 @@ __webpack_require__.r(__webpack_exports__);
 
 _node_modules_svg4everybody_dist_svg4everybody_js__WEBPACK_IMPORTED_MODULE_2___default()();
 jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).ready(function () {
-  /* tabs */
-  var __$ = document.querySelector.bind(document);
+  //mask
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[type="tel"]').inputmask("+7999-999-99-99"); //tabs2
 
-  var __$$ = document.querySelectorAll.bind(document);
+  if (document.querySelector('.line')) {
+    /* tabs */
+    var __$ = document.querySelector.bind(document);
 
-  var tabs = __$$(".firstblock-tab__nav ul li");
+    var __$$ = document.querySelectorAll.bind(document);
 
-  var panes = __$$(".firstblock-tab__item");
+    var tabs = __$$(".firstblock-tab__nav ul li");
 
-  var tabActive = __$(".firstblock-tab__nav ul li.active");
+    var panes = __$$(".firstblock-tab__item");
 
-  var line = __$(".firstblock-tab__nav .line");
+    var tabActive = __$(".firstblock-tab__nav ul li.active");
 
-  line.style.left = tabActive.offsetLeft + "px";
-  line.style.width = tabActive.offsetWidth + "px";
-  tabs.forEach(function (tab, index) {
-    var pane = panes[index];
+    var line = __$(".firstblock-tab__nav .line");
 
-    tab.onclick = function (e) {
-      e.preventDefault();
+    line.style.left = tabActive.offsetLeft + "px";
+    line.style.width = tabActive.offsetWidth + "px";
+    tabs.forEach(function (tab, index) {
+      var pane = panes[index];
 
-      __$(".firstblock-tab__nav ul li.active").classList.remove("active");
+      tab.onclick = function (e) {
+        e.preventDefault();
 
-      __$(".firstblock-tab__item").classList.remove("active");
+        __$(".firstblock-tab__nav ul li.active").classList.remove("active");
 
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()(".firstblock-tab__item").removeClass("active"); //пересмотреть
+        __$(".firstblock-tab__item").classList.remove("active");
 
-      line.style.left = this.offsetLeft + "px";
-      line.style.width = this.offsetWidth + "px";
-      this.classList.add("active");
-      pane.classList.add("active");
-    };
-  }); //tabs2
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(".firstblock-tab__item").removeClass("active"); //пересмотреть
 
-  var tabs2 = __$$(".infrastructure-tab__nav ul li");
+        line.style.left = this.offsetLeft + "px";
+        line.style.width = this.offsetWidth + "px";
+        this.classList.add("active");
+        pane.classList.add("active");
+      };
+    });
+    /* tabs 2 */
 
-  var panes2 = __$$(".infrastructure-tab__item");
+    var tabs2 = __$$(".infrastructure-tab__nav ul li");
 
-  var tabActive2 = __$(".infrastructure-tab__nav ul li.active");
+    var panes2 = __$$(".infrastructure-tab__item");
 
-  var line2 = __$(".infrastructure-tab__nav .line");
+    var tabActive2 = __$(".infrastructure-tab__nav ul li.active");
 
-  line2.style.left = tabActive2.offsetLeft + "px";
-  line2.style.width = tabActive2.offsetWidth + "px";
-  tabs2.forEach(function (tab2, index) {
-    var pane2 = panes2[index];
+    var line2 = __$(".infrastructure-tab__nav .line");
 
-    tab2.onclick = function (e) {
-      e.preventDefault();
+    line2.style.left = tabActive2.offsetLeft + "px";
+    line2.style.width = tabActive2.offsetWidth + "px";
+    tabs2.forEach(function (tab2, index) {
+      var pane2 = panes2[index];
 
-      __$(".infrastructure-tab__nav ul li.active").classList.remove("active");
+      tab2.onclick = function (e) {
+        e.preventDefault();
 
-      __$(".infrastructure-tab__item").classList.remove("active");
+        __$(".infrastructure-tab__nav ul li.active").classList.remove("active");
 
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()(".infrastructure-tab__item").removeClass("active"); //пересмотреть
+        __$(".infrastructure-tab__item").classList.remove("active");
 
-      line2.style.left = this.offsetLeft + "px";
-      line2.style.width = this.offsetWidth + "px";
-      this.classList.add("active");
-      pane2.classList.add("active");
-    };
-  }); //скролл плавный
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()(".infrastructure-tab__item").removeClass("active"); //пересмотреть
 
-  jquery__WEBPACK_IMPORTED_MODULE_5___default()('.infrastructure-tab__nav li').on('click', function () {
-    var $page = jquery__WEBPACK_IMPORTED_MODULE_5___default()('html, body');
-    var $heightHeader = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.header-top').height();
-    $page.animate({
-      scrollTop: jquery__WEBPACK_IMPORTED_MODULE_5___default()('.infrastructure__content').offset().top - $heightHeader
-    }, 0);
-    return false;
-  }); //.about__gallery .swiper-container
+        line2.style.left = this.offsetLeft + "px";
+        line2.style.width = this.offsetWidth + "px";
+        this.classList.add("active");
+        pane2.classList.add("active");
+      };
+    });
+  } //.about__gallery .swiper-container
+
 
   swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"]]);
   var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.about__gallery .swiper-container', {
@@ -2169,6 +2167,46 @@ jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).ready(function () {
       1280: {
         spaceBetween: 40,
         slidesPerView: 2
+      }
+    }
+  }); //.about__gallery-details .swiper-container
+
+  swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"]]);
+  var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.about__gallery-details .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper-about-nav__next',
+      prevEl: '.swiper-about-nav__prev'
+    },
+    pagination: {
+      el: '.swiper-about-nav__dots',
+      clickable: true
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 15,
+        slidesPerView: 1.2
+      },
+      359: {
+        spaceBetween: 15,
+        slidesPerView: 1.6
+      },
+      580: {
+        spaceBetween: 15,
+        slidesPerView: 2
+      },
+      767: {
+        spaceBetween: 15,
+        slidesPerView: 3
+      },
+      1024: {
+        spaceBetween: 0,
+        slidesPerView: 1
+      },
+      1280: {
+        spaceBetween: 0,
+        slidesPerView: 1
       }
     }
   }); //.infrastructure-item__right .swiper-container

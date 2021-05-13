@@ -488,7 +488,8 @@ section.section-firstblock {
 }
 
 .section-about {
-    padding: 6% 0;
+    padding: 7% 0;
+    overflow: visible;
 
     @media screen and (max-width: $w580) {
         padding-top: 40px;
@@ -512,6 +513,13 @@ section.section-firstblock {
         }
     }
 
+    &__gallery {
+        margin-top: -13%;
+
+        @media screen and (max-width: $w1024) {
+            margin-top: 0;
+        }
+    }
 
 
     &__desc {
@@ -579,7 +587,7 @@ section.section-firstblock {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: rem(50);
+        padding: rem(45) rem(45) rem(45) rem(45);
         background-color: rgba($color: #000000, $alpha: 0.4);
 
         @media screen and (max-width: $w1376) {
@@ -755,7 +763,7 @@ section.section-firstblock {
     }
 
     &__content {
-        padding-top: 12%;
+        padding-top: 6.5%;
 
         @media screen and (max-width: $w1024) {
             padding-top: 6%;
@@ -771,6 +779,8 @@ section.section-firstblock {
         padding-top: rem(45);
         position: relative;
         border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        max-width: 1380px;
+        margin-right: auto;
 
         @media screen and (max-width: $w760) {
             overflow-x: auto;
@@ -779,7 +789,7 @@ section.section-firstblock {
         & ul {
             display: flex;
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
 
             & li {
@@ -828,10 +838,14 @@ section.section-firstblock {
         width: 33.3%;
         height: 4px;
         display: block;
-        bottom: -1px;
+        bottom: -3px;
         left: 0;
-        background: $main;
+        background: #fff;
         transition: 0.4s ease;
+
+        @media screen and (max-width: $w580) {
+            bottom: -1px;
+        }
     }
 
 
@@ -1013,8 +1027,8 @@ section.section-firstblock {
 
 .section-apartments {
 
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 8%;
+    padding-bottom: 5.5%;
 
     @media screen and (max-width: $w580) {
         padding-top: 40px;
@@ -1027,7 +1041,7 @@ section.section-firstblock {
 
     &__title {
         @include section-title;
-        padding-bottom: rem(50);
+        padding-bottom: rem(45);
     }
 }
 
@@ -1115,11 +1129,19 @@ section.section-firstblock {
 
     &__count {
         margin-left: rem(20);
+
+        @media screen and (max-width: $w360) {
+            display: none;
+        }
     }
 
     &__start {
         & a {
             padding: 0 rem(20);
+        }
+
+        @media screen and (max-width: $w480) {
+            display: none;
         }
     }
 }
@@ -1371,7 +1393,15 @@ section.section-firstblock {
             }
         }
 
+        & input {
+            border-color: #000;
+        }
+
         & .btn {
+
+            padding-left: 17px;
+            padding-right: 17px;
+
             @media screen and (max-width: $w480) {
                 font-size: 14px;
             }
@@ -1422,10 +1452,12 @@ section.section-firstblock {
 
     &__prev,
     &__next {
-        & svg {
-            fill: #ccc;
-            width: rem(40);
-            height: rem(40);
+        @media screen and (max-width: $w1024) {
+            & svg {
+                fill: #ccc;
+                width: rem(40);
+                height: rem(40);
+            }
         }
     }
 }
@@ -1500,7 +1532,16 @@ section.section-firstblock {
     left: 0;
     right: 0;
     z-index: 2;
-    justify-content: center;
+    justify-content: flex-end;
+
+    bottom: rem(110);
+    right: rem(100);
+
+    @media screen and (max-width: $w580) {
+        justify-content: center;
+        bottom: rem(80);
+        right: rem(0);
+    }
 
     &>div {
         margin: 0 rem(15);
@@ -1588,7 +1629,7 @@ section.section-firstblock {
     &__content {
         position: relative;
         z-index: 2;
-        background-color: rgba($color: #000000, $alpha: 0.8);
+        background-color: rgba($color: #0f0707, $alpha: 0.78);
 
     }
 
@@ -1718,7 +1759,7 @@ section.section-firstblock {
 .presentation {
 
     color: #fff;
-    padding-top: 10%;
+    padding-top: 13%;
     padding-bottom: 10%;
 
     @media screen and (max-width: $w1024) {
@@ -1831,6 +1872,9 @@ section.section-firstblock {
                 border-color: #fff;
                 color: #fff;
                 width: 100%;
+                padding-left: 17px;
+                padding-right: 17px;
+
             }
 
             & .form__item {
@@ -1929,7 +1973,11 @@ section.section-firstblock {
         @include col();
         @include size-w940(7.5);
         @include size(12);
-        padding: rem(60) 0;
+        padding: rem(80) 0;
+
+        @media screen and (max-width: 580) {
+            padding: rem(60) 0;
+        }
 
         &-desc {
             padding-top: rem(0);
@@ -2177,7 +2225,12 @@ section.section-firstblock {
         padding-top: rem(30);
 
         @media screen and (max-width: $w1100) {
-            font-size: rem(28);
+            font-size: rem(22);
+
+        }
+
+        @media screen and (max-width: $w580) {
+            font-size: rem(22);
 
         }
     }

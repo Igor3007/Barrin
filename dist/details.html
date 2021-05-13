@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU"></script>
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css?v=1.52">
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="header-top__logo"><a href="#">Жилой комплекс / <span> Barrin House </span></a></div>
+        <div class="header-top__msgr">
+          <ul>
+            <li><a href="#">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                </svg></a></li>
+            <li><a href="#">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="header-top__phone"><a href="tel:+7 (495) 085-16-64">+7 (495) 085-16-64</a></div>
+        <div class="header-top__btn">
+          <button class="btn btn-line btn-small">Заказать звонок</button>
+        </div>
+        <div class="header-top__menu">
+          <div class="burger"><i></i><i></i><i></i></div>Меню
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-details-main">
+        <div class="details-main">
+          <div class="details-main__bg"><span class="bgimage" style="background-image: url(/img/common/details-bg.jpg)"></span>
+          </div>
+          <div class="details-main__content">
+            <div class="container">
+              <div class="details-data">
+                <div class="details-data__head">
+                  <div class="details-data__address">
+                    <svg width="33" height="33">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_pen"></use>
+                    </svg>
+                    <address>Москва, ул. Малая Пироговская, вл. 8 </address>
+                  </div>
+                  <div class="details-data__title">
+                    <h1>Квартира в ЖК «Barrin House»</h1>
+                  </div>
+                </div>
+                <div class="details-data__main">
+                  <div class="details-data__main-present">
+                    <div class="pink-round-download">
+                      <div class="pink-round-download__round"></div>
+                      <div class="pink-round-download__image"><span class="bgimage" style="background-image: url(/img/common/presentation.png)"></span><span class="dl-text">Скачать <br> презентацию</span>
+                        <svg width="25" height="25">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_dl"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="details-data__main-cost">
+                    <div class="details-data__main-wrp">
+                      <div class="details-data__usd">2 629 879 $</div>
+                      <div class="details-data__rub">184 091 513 ₽</div>
+                    </div>
+                    <ul>
+                      <li> <span class="props-name"> Площадь квартиры:	 </span><span class="props-val">122.93 кв. м</span></li>
+                      <li> <span class="props-name"> Кол-во комнат:	 </span><span class="props-val">2</span></li>
+                      <li> <span class="props-name"> Этаж:	 </span><span class="props-val">4</span></li>
+                      <li> <span class="props-name"> Метро: </span><span class="props-val">Фрунзенская</span></li>
+                      <li> <span class="props-name"> Район: </span><span class="props-val">Хамовники</span></li>
+                    </ul>
+                    <button class="btn btn-line btn-white">ОСТАВИТЬ ЗАЯВКУ</button>
+                  </div>
+                  <div class="details-data__main-id"><span>ID</span><span>2664862</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-about">
+        <div class="about">
+          <div class="about__desc">
+            <div class="about__desc-logo"><span class="bgimage" style="background-image: url(/img/common/logo-barrin.svg)"></span>
+            </div>
+            <div class="about__desc-title">О ЖК Barrin House</div>
+            <div class="about__desc-text">В исторически значимом центре Москвы, в окружении зеленых парков и исторических зданий расположился новый жилой комплекс "Barrin House", Дом на Малой Пироговской». Район Хамовники. Ближайшее метро Фрунзенское всего в пяти минутах ходьбы от жилого комплекса. Недалеко от места застройки памятники архитектуры: Усадьба Трубецких в Хамовниках, Новодевичий монастырь, и парковая зона - сквер Девичьего поля. Монолитно-кирпичное жилое здание разной этажности относится к категории премиум-класса. Одно, двух и трех комнатные квартиры в ЖК "Barrin House", Дом на Малой Пироговской» предлагаются площадью от 58,4 до 394,3 кв.м. </div>
+          </div>
+          <div class="about__gallery-details">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="about-card-details">
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/0.jpg)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about-card-details">
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/1.jpg)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about-card-details">
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/2.jpg)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about-card-details">
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/3.jpg)"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="about-card-details">
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/4.jpg)"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-about-nav">
+                <div class="swiper-about-nav__prev">
+                  <svg width="25" height="25">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-about-nav__dots"></div>
+                <div class="swiper-about-nav__next">
+                  <svg width="25" height="25">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-gallery-details">
+        <div class="container">gallery</div>
+      </section>
+      <section class="presentation">
+        <div class="presentation__wrp">
+          <div class="presentation__bg"><span class="bgimage" style="background-image: url(/img/common/)"></span>
+          </div>
+          <div class="presentation__content">
+            <div class="presentation-main">
+              <div class="presentation-main__left">
+                <div class="presentation-main__left-title">Презентация <br> ЖК Barrin House</div>
+                <div class="presentation-main__left-desc">Расположение корпусов,<br> инфраструктура,<br> планировки и цены<br> на квартиры в жилом<br> комплексе Barrin House<br> в нашей pdf презентации.</div>
+                <div class="presentation-main__left-form">
+                  <form action="#" method="POST">
+                    <div class="form">
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <input type="text" placeholder="Ваше имя">
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <input type="tel" placeholder="Ваш телефон">
+                        </div>
+                      </div>
+                      <div class="form__item">
+                        <div class="form__subitem">
+                          <button class="btn btn-line">Скачать презентацию</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="presentation-main__right"><span class="bgimage" style="background-image: url(/img/common/presentation-hd.png)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="videoblock">
+        <div class="container">
+          <div class="videoblock__title">Видео о ЖК Barrin House</div>
+          <div class="videoblock__content">
+            <div class="video" data-id="pTeH4KOszFM">
+              <div class="video__preview"><span class="bgimage" style="background-image: url(/img/common/video.jpg)"></span>
+              </div>
+              <div class="video__action">
+                <div class="video__button">
+                  <svg width="70" height="70">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-form-details">
+        <div class="container">form</div>
+      </section>
+      <section class="section-similar-details">
+        <div class="container">similar</div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__logo"><span class="bgimage" style="background-image: url(/img/svg/donstroy.svg)"></span>
+          </div>
+          <div class="footer__text">«Донстрой» – крупнейший девелопер Москвы. <br> Одна из самых стабильных компаний на рынке недвижимости Москвы.  <br>Мы работаем с 1994 года, и за это время построили целый город!</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js?v=1.52"></script>
+    <script src="js/vendor.js"></script>
+  </body>
+</html>
