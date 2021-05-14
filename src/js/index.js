@@ -9,12 +9,38 @@ import Swiper, {
 } from 'swiper';
 import 'jquery.inputmask/dist/jquery.inputmask.bundle';
 
-import $ from 'jquery';
+import $, { map } from 'jquery';
 import './import/jquery.fancybox.min';
 
 svgPolyfill();
 
 $(document).ready(function () {
+
+  //mobile menu
+
+  $('.burger').on('click', function () {
+    $(this).toggleClass('open')
+    $('.mobile-menu').toggleClass('open')
+    $('html').toggleClass('hidden')
+  });
+
+  $('.mobile-menu__close svg').on('click', function () {
+    $('.burger').toggleClass('open')
+    $('.mobile-menu').toggleClass('open')
+    $('html').toggleClass('hidden')
+  });
+
+  //закрыть при клике вне
+  $(document).on('click', function (e) {
+    var div = $(".burger, .mobile-menu"); //класс элемента вне которого клик
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      //закрыть popup
+      if ($('.burger').hasClass('open')) {
+        $('.burger').trigger('click')
+      }
+
+    }
+  });
 
   //mask
   $('input[type="tel"]').inputmask("+7999-999-99-99");
@@ -305,7 +331,7 @@ ymaps.ready(function () {
         balloonContent: mapSetting.mapBaloonContent
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '/img/svg/ic_pen-map.svg',
+        iconImageHref: '/img/svg/ic_pen.svg',
         iconImageSize: [60, 60],
         iconImageOffset: [-30, -60]
       });

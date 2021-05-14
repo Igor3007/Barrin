@@ -2061,7 +2061,29 @@ __webpack_require__.r(__webpack_exports__);
 
 _node_modules_svg4everybody_dist_svg4everybody_js__WEBPACK_IMPORTED_MODULE_2___default()();
 jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).ready(function () {
-  //mask
+  //mobile menu
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()('.burger').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).toggleClass('open');
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.mobile-menu').toggleClass('open');
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('html').toggleClass('hidden');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()('.mobile-menu__close svg').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.burger').toggleClass('open');
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.mobile-menu').toggleClass('open');
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('html').toggleClass('hidden');
+  }); //закрыть при клике вне
+
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).on('click', function (e) {
+    var div = jquery__WEBPACK_IMPORTED_MODULE_5___default()(".burger, .mobile-menu"); //класс элемента вне которого клик
+
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      //закрыть popup
+      if (jquery__WEBPACK_IMPORTED_MODULE_5___default()('.burger').hasClass('open')) {
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.burger').trigger('click');
+      }
+    }
+  }); //mask
+
   jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[type="tel"]').inputmask("+7999-999-99-99"); //tabs2
 
   if (document.querySelector('.line')) {
@@ -2304,7 +2326,7 @@ ymaps.ready(function () {
       balloonContent: mapSetting.mapBaloonContent
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/svg/ic_pen-map.svg',
+      iconImageHref: '/img/svg/ic_pen.svg',
       iconImageSize: [60, 60],
       iconImageOffset: [-30, -60]
     });

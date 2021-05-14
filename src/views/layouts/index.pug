@@ -16,6 +16,7 @@ html(lang="ru")
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
     script(src="https://api-maps.yandex.ru/2.1-dev/?lang=ru_RU")
+    script(src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" type="text/javascript") 
 
 
     link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
@@ -42,5 +43,36 @@ html(lang="ru")
       block content
     footer
       block footer
+
+    .mobile-menu
+      .mobile-menu__wrp
+        .mobile-menu__close: +icons('#ic_cross', 30)
+        .mobile-menu__nav
+          nav
+            ul 
+              li: a(href="#") О ЖК Barrin House
+              li: a(href="#") Инфраструктура
+              li: a(href="#") Апартаменты
+              li: a(href="#") Отдел продаж
+              li: a(href="#") Галерея
+              li: a(href="#") Преимущества
+              li: a(href="#") Презентация
+              li: a(href="#") Контакты
+        .mobile-menu__consult
+          .mobile-menu__manager
+            .menu-manager__photo 
+              +bgimage('../img/common/u2.png')
+            .menu-manager__name
+              .menu-manager__name-title Александра
+              .menu-manager__name-subtitle Менеджер по продажам
+
+          .mobile-menu__text Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта
+        .mobile-menu__phone
+          a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
+        .mobile-menu__callback
+          button.btn.btn-line(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
+        .mobile-menu__msgr
+          a(href='#'): +icons('#ic_tg', 17)
+          a(href='#'): +icons('#ic_wa', 17)
     block scripts
 

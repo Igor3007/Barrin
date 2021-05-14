@@ -1,1 +1,6 @@
-import Vue from './import/vue';
+var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Привет, Vue!'
+    }
+  })

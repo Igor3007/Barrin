@@ -1,5 +1,6 @@
 const mapSetting = {
-    'mapPointCoordinats': '53.905061990282334,30.343826560943878',
-    'mapHintContent': 'Barrin House ',
-    'mapBaloonContent': 'Barrin House ',
-  }
+  'mapPointCoordinats': '55.781950, 37.239939',
+  'mapPointIcon': '/img/svg/ic_pen.svg',
+  'mapHintContent': 'Ренессанс Парк',
+  'mapBaloonContent': 'Ренессанс Парк',
+}

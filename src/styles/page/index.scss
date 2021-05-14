@@ -2378,3 +2378,368 @@ section.section-firstblock {
 
 
 }
+
+/* mobile menu */
+
+.mobile-menu {
+
+    background: #202020;
+    position: fixed;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    max-width: 720px;
+    flex-direction: column;
+    overflow-x: auto;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    z-index: 10;
+    padding: 80px;
+    color: #fff;
+
+    @media screen and (max-width: $w760) {
+        padding: 50px;
+    }
+
+    @media screen and (max-width: $w580) {
+        padding: 30px;
+    }
+
+    @media screen and (max-width: $w480) {
+        padding: 25px;
+    }
+
+    @media screen and (max-width: $w360) {
+        padding: 15px;
+
+    }
+
+    &.open {
+        display: flex;
+        transform: translateX(0);
+        box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.541);
+    }
+
+    &__close {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__nav {
+
+        margin-top: rem(40);
+
+        & li {
+
+            list-style-type: none;
+
+            & a {
+
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 190%;
+                text-align: center;
+                color: #FFFFFF;
+                text-align: center;
+                display: block;
+                padding-bottom: 8px;
+
+                @media screen and (max-width: $w580) {
+                    font-size: 18px;
+                    line-height: 157%;
+                }
+
+                @media screen and (max-width: $w360) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &__manager {
+        display: flex;
+        align-items: center;
+        border-right: 2px solid #fff;
+
+        @media screen and (max-width: $w580) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__consult {
+        display: flex;
+        align-items: center;
+
+        @include padd-top(50);
+
+        &>div {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        font-size: 13px;
+        text-align: center;
+        padding-left: 20px;
+
+        @media screen and (max-width: $w580) {
+            padding: 0 30px;
+        }
+
+        @media screen and (max-width: $w480) {
+            padding: 0 20px;
+            font-size: 13px;
+        }
+
+        @media screen and (max-width: $w360) {
+            padding: 0 10px;
+        }
+    }
+
+    &__phone {
+
+        padding-top: 30px;
+
+        & a {
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 22px;
+            text-align: right;
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+
+    &__callback {
+        padding-top: 30px;
+
+        & .btn.btn-line {
+            border: 1px solid #fff;
+            color: #fff;
+            height: 40px;
+            margin: 0 auto;
+        }
+    }
+
+    &__msgr {
+        padding: 30px 15px 30px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+            fill: #fff;
+            width: 30px;
+            height: 30px;
+        }
+
+        & a {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+
+
+        }
+    }
+
+}
+
+.menu-manager {
+    &__photo {
+        margin-right: 20px;
+
+        @media screen and (max-width: $w580) {
+            margin-right: 0px;
+            margin-bottom: 15px;
+        }
+
+        & .bgimage {
+            width: 80px;
+            height: 80px;
+            @include bgimage-cover;
+            border-radius: 50%;
+
+            @media screen and (max-width: $w480) {
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+    }
+
+    &__name-title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+
+        @media screen and (max-width: $w580) {
+            text-align: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: $w480) {
+            font-size: 14px;
+        }
+    }
+
+    &__name-subtitle {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+
+        @media screen and (max-width: $w580) {
+            text-align: center;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: $w480) {
+            font-size: 12px;
+        }
+    }
+
+    &__text {
+        max-width: 217px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header-opacity.open .container {
+    background: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.fix-consult {
+
+    position: fixed;
+    z-index: 12;
+    bottom: 100px;
+    right: 100px;
+
+    @media screen and (max-width: $w1024) {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    &__photo {
+        margin-right: 20px;
+
+        & .bgimage {
+            width: 80px;
+            height: 80px;
+            @include bgimage-cover;
+            border-radius: 50%;
+
+            @media screen and (max-width: $w1024) {
+                width: 50px;
+                height: 50px;
+            }
+
+
+        }
+    }
+}
+
+/* modal callback */
+
+.modal-callback {
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+
+    &__title {
+        padding: 30px;
+        background-color: #202020;
+        border-bottom: 3px solid $main;
+
+        @media screen and (max-width: $w580) {
+            padding: 30px;
+        }
+
+        @media screen and (max-width: $w360) {
+            padding: 15px;
+        }
+
+        & h2 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+
+            @media screen and (max-width: $w480) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__form {
+        padding: 50px;
+
+        @media screen and (max-width: $w580) {
+            padding: 30px;
+        }
+
+        @media screen and (max-width: $w360) {
+            padding: 15px;
+        }
+
+        & .form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        & .form-text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+            text-align: center;
+            color: #828282;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+    }
+
+    & .fancybox-close-small {
+
+        padding: 4px;
+        top: 10px;
+        right: 10px;
+
+        @media screen and (max-width: $w580) {
+            padding: 10px;
+        }
+
+        & svg {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            background-image: url("../img/svg/ic_cross-dark.svg");
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}

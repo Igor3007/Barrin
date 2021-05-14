@@ -1226,7 +1226,7 @@ body.compensate-for-scrollbar {
 /* Styling for Small-Screen Devices */
 
 /**
- * Swiper 6.4.15
+ * Swiper 6.5.9
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -1234,7 +1234,7 @@ body.compensate-for-scrollbar {
  *
  * Released under the MIT License
  *
- * Released on: February 18, 2021
+ * Released on: April 30, 2021
  */
 
 @font-face {
@@ -1408,7 +1408,7 @@ body.compensate-for-scrollbar {
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
   display: flex;
@@ -1550,7 +1550,6 @@ button.swiper-pagination-bullet {
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1850,7 +1849,6 @@ button.swiper-pagination-bullet {
   top: 0;
   bottom: 0;
   right: 0;
-  -webkit-filter: blur(50px);
   filter: blur(50px);
 }
 
@@ -4855,6 +4853,259 @@ section.section-firstblock a {
   color: #F4F4F4;
 }
 
+/* mobile menu */
+
+.mobile-menu {
+  background: #202020;
+  position: fixed;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  top: 60px;
+  max-width: 720px;
+  flex-direction: column;
+  overflow-x: auto;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+  z-index: 10;
+  padding: 80px;
+  color: #fff;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateX(0);
+  box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.541);
+}
+
+.mobile-menu__close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu__nav {
+  margin-top: 2.5rem;
+}
+
+.mobile-menu__nav li {
+  list-style-type: none;
+}
+
+.mobile-menu__nav li a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 190%;
+  text-align: center;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+  padding-bottom: 8px;
+}
+
+.mobile-menu__manager {
+  display: flex;
+  align-items: center;
+  border-right: 2px solid #fff;
+}
+
+.mobile-menu__consult {
+  display: flex;
+  align-items: center;
+  padding-top: 3.125rem;
+}
+
+.mobile-menu__consult > div {
+  width: 50%;
+}
+
+.mobile-menu__text {
+  font-size: 13px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.mobile-menu__phone {
+  padding-top: 30px;
+}
+
+.mobile-menu__phone a {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 22px;
+  text-align: right;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.mobile-menu__callback {
+  padding-top: 30px;
+}
+
+.mobile-menu__callback .btn.btn-line {
+  border: 1px solid #fff;
+  color: #fff;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.mobile-menu__msgr {
+  padding: 30px 15px 30px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu__msgr svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.mobile-menu__msgr a {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-manager__photo {
+  margin-right: 20px;
+}
+
+.menu-manager__photo .bgimage {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transition: 0.3s ease;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.menu-manager__name-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+
+.menu-manager__name-subtitle {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.menu-manager__text {
+  max-width: 217px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.header-opacity.open .container {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.fix-consult {
+  position: fixed;
+  z-index: 12;
+  bottom: 100px;
+  right: 100px;
+}
+
+.fix-consult__photo {
+  margin-right: 20px;
+}
+
+.fix-consult__photo .bgimage {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transition: 0.3s ease;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* modal callback */
+
+.modal-callback {
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.modal-callback__title {
+  padding: 30px;
+  background-color: #202020;
+  border-bottom: 3px solid #D41367;
+}
+
+.modal-callback__title h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-callback__form {
+  padding: 50px;
+}
+
+.modal-callback__form .form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal-callback__form .form-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #828282;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.modal-callback .fancybox-close-small {
+  padding: 4px;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-callback .fancybox-close-small svg {
+  display: none;
+}
+
+.modal-callback .fancybox-close-small::before {
+  content: '';
+  background-image: url("../img/svg/ic_cross-dark.svg");
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: contain;
+  background-position: center;
+}
+
 .details-main {
   position: relative;
 }
@@ -5173,6 +5424,10 @@ section.section-firstblock a {
   .department-form__msgr {
     margin-bottom: 1.5625rem;
   }
+
+  .mobile-menu__consult {
+    padding-top: 2.34375rem;
+  }
 }
 
 @media screen and (max-width: 1376px) {
@@ -5191,6 +5446,10 @@ section.section-firstblock a {
 
   .about-card__btn .btn {
     font-size: 0.875rem !important;
+  }
+
+  .mobile-menu__consult {
+    padding-top: 2.23958rem;
   }
 }
 
@@ -5253,6 +5512,10 @@ section.section-firstblock a {
 
   .contacts__right {
     font-size: 28px;
+  }
+
+  .mobile-menu__consult {
+    padding-top: 2.60417rem;
   }
 }
 
@@ -5388,6 +5651,16 @@ section.section-firstblock a {
 
   .section-maps__map span {
     height: 420px;
+  }
+
+  .fix-consult {
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .fix-consult__photo .bgimage {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -5557,6 +5830,10 @@ section.section-firstblock a {
     display: none;
   }
 
+  .mobile-menu__consult {
+    padding-top: 3.125rem;
+  }
+
   .details-main__bg .bgimage {
     height: 100%;
   }
@@ -5703,6 +5980,10 @@ section.section-firstblock a {
 
   .section-maps__map span {
     height: 300px;
+  }
+
+  .mobile-menu {
+    padding: 50px;
   }
 }
 
@@ -5951,6 +6232,52 @@ section.section-firstblock a {
   .contacts__phone {
     font-size: 1.375rem;
   }
+
+  .mobile-menu {
+    padding: 30px;
+  }
+
+  .mobile-menu__nav li a {
+    font-size: 18px;
+    line-height: 157%;
+  }
+
+  .mobile-menu__manager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-menu__text {
+    padding: 0 30px;
+  }
+
+  .menu-manager__photo {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
+  .menu-manager__name-title {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu-manager__name-subtitle {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .modal-callback__title {
+    padding: 30px;
+  }
+
+  .modal-callback__form {
+    padding: 30px;
+  }
+
+  .modal-callback .fancybox-close-small {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 580) {
@@ -6073,6 +6400,32 @@ section.section-firstblock a {
     font-size: 1rem;
     line-height: 160%;
   }
+
+  .mobile-menu {
+    padding: 25px;
+  }
+
+  .mobile-menu__text {
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  .menu-manager__photo .bgimage {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-manager__name-title {
+    font-size: 14px;
+  }
+
+  .menu-manager__name-subtitle {
+    font-size: 12px;
+  }
+
+  .modal-callback__title h2 {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -6103,6 +6456,26 @@ section.section-firstblock a {
 
   .section-maps__map span {
     height: 220px;
+  }
+
+  .mobile-menu {
+    padding: 15px;
+  }
+
+  .mobile-menu__nav li a {
+    font-size: 16px;
+  }
+
+  .mobile-menu__text {
+    padding: 0 10px;
+  }
+
+  .modal-callback__title {
+    padding: 15px;
+  }
+
+  .modal-callback__form {
+    padding: 15px;
   }
 }
 

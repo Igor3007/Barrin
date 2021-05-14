@@ -18,7 +18,7 @@ block header
     .header-top__phone
       a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
     .header-top__btn
-      button.btn.btn-line.btn-small Заказать звонок
+      button.btn.btn-line.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
     .header-top__menu
       .burger
         i
@@ -83,7 +83,7 @@ block content
                   .about-card__content
                     .about-card__title= item
                     .about-card__btn
-                      button.btn.btn-line.btn-white Подробнее
+                      button.btn.btn-line.btn-white(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Подробнее
           .swiper-about-nav
             .swiper-about-nav__prev: +icons('#ic_swiper-prev')
             .swiper-about-nav__dots
@@ -151,14 +151,14 @@ block content
           .apartments-catalog
             .apartments-catalog__desc В жилом комплексе Barrin House всего 312 квартир площадью от 58,4 до 394,3 кв. м. Особые преимущества — высокие потолки, зимний сад и гардеробные. Вы можете купить квартиру в Barrin House в соответствии с собственными запросами и предпочтениями.
             .apartments-catalog__filter
-            .apartments-catalog__sort
+            .apartments-catalog__sort(id="app") {{message}}
             .apartments-catalog__list
               .apartments-catalog__item: +minicard('1')
               .apartments-catalog__item: +minicard('1')
               .apartments-catalog__item: +minicard('1')
               .apartments-catalog__item: +minicard('1')
               .apartments-catalog__item: +minicard('1')
-              .apartments-catalog__item: +minicard('1')
+              .apartments-catalog__item: +minicard('1') 
 
             .apartments-catalog__pagination
               .catalog__pagination
@@ -172,8 +172,8 @@ block content
                 .catalog__pagination__next: a(href="#")= '>'
                 .catalog__pagination__count 3 страницы
 
-    script
-      include ../js/catalog.js
+    script 
+      include ../js/catalog.js 
 
   section.sale-department(style="background-image: url(/img/common/sale-bg.svg)")
     .container
