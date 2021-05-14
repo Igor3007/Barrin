@@ -2204,32 +2204,6 @@ jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).ready(function () {
     pagination: {
       el: '.swiper-about-nav__dots',
       clickable: true
-    },
-    breakpoints: {
-      0: {
-        spaceBetween: 15,
-        slidesPerView: 1.2
-      },
-      359: {
-        spaceBetween: 15,
-        slidesPerView: 1.6
-      },
-      580: {
-        spaceBetween: 15,
-        slidesPerView: 2
-      },
-      767: {
-        spaceBetween: 15,
-        slidesPerView: 3
-      },
-      1024: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      },
-      1280: {
-        spaceBetween: 0,
-        slidesPerView: 1
-      }
     }
   }); //.infrastructure-item__right .swiper-container
 
@@ -2306,6 +2280,40 @@ jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).ready(function () {
       580: {
         spaceBetween: 40
       }
+    }
+  }); //.gallery-details.swiper-container
+
+  swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"]]);
+  var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.gallery-details .swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    observer: true,
+    loop: true,
+    observeParents: true,
+    navigation: {
+      nextEl: '.swiper-gdetails-nav__next',
+      prevEl: '.swiper-gdetails-nav__prev'
+    },
+    pagination: {
+      el: '.swiper-gdetails-nav__dots',
+      clickable: true
+    }
+  }); //.similar-details__list .swiper-container
+
+  swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"]]);
+  var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.similar-details__list .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    observer: true,
+    loop: true,
+    observeParents: true,
+    navigation: {
+      nextEl: '.swiper-similar-next',
+      prevEl: '.swiper-similar-prev'
+    },
+    pagination: {
+      el: '.similar-details__dots',
+      clickable: true
     }
   });
 });

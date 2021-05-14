@@ -48,7 +48,7 @@
         </div>
         <div class="header-top__phone"><a href="tel:+7 (495) 085-16-64">+7 (495) 085-16-64</a></div>
         <div class="header-top__btn">
-          <button class="btn btn-line btn-small">Заказать звонок</button>
+          <button class="btn btn-line btn-small" data-fancybox="" data-type="ajax" data-src="_popup-callback.html">Заказать звонок</button>
         </div>
         <div class="header-top__menu">
           <div class="burger"><i></i><i></i><i></i></div>Меню
@@ -76,12 +76,12 @@
                 </div>
                 <div class="details-data__main">
                   <div class="details-data__main-present">
-                    <div class="pink-round-download">
+                    <div class="pink-round-download" data-fancybox="" data-type="ajax" data-src="_popup-callback.html">
                       <div class="pink-round-download__round"></div>
-                      <div class="pink-round-download__image"><span class="bgimage" style="background-image: url(/img/common/presentation.png)"></span><span class="dl-text">Скачать <br> презентацию</span>
-                        <svg width="25" height="25">
-                          <use xlink:href="/img/sprites/sprite.svg#ic_dl"></use>
-                        </svg>
+                      <div class="pink-round-download__image"><span class="bgimage" style="background-image: url(/img/common/presentation.png)"></span><span class="dl-text">Скачать <br> презентацию
+                          <svg width="25" height="25">
+                            <use xlink:href="/img/sprites/sprite.svg#ic_dl"></use>
+                          </svg></span>
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,9 @@
                       <li> <span class="props-name"> Метро: </span><span class="props-val">Фрунзенская</span></li>
                       <li> <span class="props-name"> Район: </span><span class="props-val">Хамовники</span></li>
                     </ul>
-                    <button class="btn btn-line btn-white">ОСТАВИТЬ ЗАЯВКУ</button>
+                    <div class="data-details__button">
+                      <button class="btn btn-line btn-white" data-fancybox="" data-type="ajax" data-src="_popup-callback.html">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
                   </div>
                   <div class="details-data__main-id"><span>ID</span><span>2664862</span></div>
                 </div>
@@ -106,7 +108,7 @@
           </div>
         </div>
       </section>
-      <section class="section-about">
+      <section class="section-about section-about--details">
         <div class="about">
           <div class="about__desc">
             <div class="about__desc-logo"><span class="bgimage" style="background-image: url(/img/common/logo-barrin.svg)"></span>
@@ -119,31 +121,31 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="about-card-details">
-                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/0.jpg)"></span>
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/common/chem.jpg)"></span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="about-card-details">
-                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/1.jpg)"></span>
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/common/chem.jpg)"></span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="about-card-details">
-                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/2.jpg)"></span>
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/common/chem.jpg)"></span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="about-card-details">
-                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/3.jpg)"></span>
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/common/chem.jpg)"></span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="about-card-details">
-                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/about/4.jpg)"></span>
+                    <div class="about-card-details__image"><span class="bgimage" style="background-image: url(/img/common/chem.jpg)"></span>
                     </div>
                   </div>
                 </div>
@@ -166,9 +168,33 @@
         </div>
       </section>
       <section class="section-gallery-details">
-        <div class="container">gallery</div>
+        <div class="gallery-details">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><span class="bgimage" style="background-image: url(/img/common/gallery-details.jpg)"></span>
+              </div>
+              <div class="swiper-slide"><span class="bgimage" style="background-image: url(/img/common/gallery-details.jpg)"></span>
+              </div>
+              <div class="swiper-slide"><span class="bgimage" style="background-image: url(/img/common/gallery-details.jpg)"></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-gdetails-nav">
+            <div class="swiper-gdetails-nav__prev">
+              <svg width="25" height="25">
+                <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+              </svg>
+            </div>
+            <div class="swiper-gdetails-nav__dots"></div>
+            <div class="swiper-gdetails-nav__next">
+              <svg width="25" height="25">
+                <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="presentation">
+      <section class="presentation presentation--details">
         <div class="presentation__wrp">
           <div class="presentation__bg"><span class="bgimage" style="background-image: url(/img/common/)"></span>
           </div>
@@ -205,7 +231,7 @@
           </div>
         </div>
       </section>
-      <section class="videoblock">
+      <section class="videoblock videoblock--details" style="background-image: url(/img/common/sale-bg.svg)">
         <div class="container">
           <div class="videoblock__title">Видео о ЖК Barrin House</div>
           <div class="videoblock__content">
@@ -224,10 +250,161 @@
         </div>
       </section>
       <section class="section-form-details">
-        <div class="container">form</div>
+        <div class="container"> 
+          <div class="form-details">
+            <div class="form-details__title">Остались вопросы?</div>
+            <div class="form-details__subtitle">Укажите свои контакты и менеджер свяжется с вами</div>
+            <div class="form-details__form">
+              <div class="form">
+                <div class="form__item">
+                  <div class="form__subitem">
+                    <input type="text" placeholder="Ваше имя">
+                  </div>
+                  <div class="form__subitem">
+                    <input type="tel" placeholder="Ваш телефон">
+                  </div>
+                  <div class="form__subitem">
+                    <button class="btn btn-line btn-white" type="submit">записаться на экскурсию</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="section-similar-details">
-        <div class="container">similar</div>
+      <section class="section-similar-details" style="background-image: url(/img/common/bg-details-forn.svg)">
+        <div class="container"> 
+          <div class="similar-details">
+            <div class="similar-details__title">Похожие объекты</div>
+            <div class="similar-details__list">
+              <div class="swiper-similar-prev">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_swiper-prev"></use>
+                </svg>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="minicard">
+                      <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span>
+                      </div>
+                      <div class="minicard__desc">
+                        <div class="minicard__props">
+                          <ul>
+                            <li>Комнат: <span>3</span></li>
+                            <li>Площадь: <span>775 м2</span></li>
+                            <li>Этаж: <span>2</span></li>
+                          </ul>
+                        </div>
+                        <div class="minicard__price">
+                          <div class="minicard__usd">ID5456151</div>
+                          <div class="minicard__rub"><span>цена</span> по запросу </div>
+                        </div>
+                      </div>
+                      <div class="minicard__btn">
+                        <button class="btn btn-line btn-full" data-fancybox="catalog" data-type="ajax" data-src="_popup-card.html">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="minicard">
+                      <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span>
+                      </div>
+                      <div class="minicard__desc">
+                        <div class="minicard__props">
+                          <ul>
+                            <li>Комнат: <span>3</span></li>
+                            <li>Площадь: <span>775 м2</span></li>
+                            <li>Этаж: <span>2</span></li>
+                          </ul>
+                        </div>
+                        <div class="minicard__price">
+                          <div class="minicard__usd">ID5456151</div>
+                          <div class="minicard__rub"><span>цена</span> по запросу </div>
+                        </div>
+                      </div>
+                      <div class="minicard__btn">
+                        <button class="btn btn-line btn-full" data-fancybox="catalog" data-type="ajax" data-src="_popup-card.html">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="minicard">
+                      <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span>
+                      </div>
+                      <div class="minicard__desc">
+                        <div class="minicard__props">
+                          <ul>
+                            <li>Комнат: <span>3</span></li>
+                            <li>Площадь: <span>775 м2</span></li>
+                            <li>Этаж: <span>2</span></li>
+                          </ul>
+                        </div>
+                        <div class="minicard__price">
+                          <div class="minicard__usd">ID5456151</div>
+                          <div class="minicard__rub"><span>цена</span> по запросу </div>
+                        </div>
+                      </div>
+                      <div class="minicard__btn">
+                        <button class="btn btn-line btn-full" data-fancybox="catalog" data-type="ajax" data-src="_popup-card.html">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="minicard">
+                      <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span>
+                      </div>
+                      <div class="minicard__desc">
+                        <div class="minicard__props">
+                          <ul>
+                            <li>Комнат: <span>3</span></li>
+                            <li>Площадь: <span>775 м2</span></li>
+                            <li>Этаж: <span>2</span></li>
+                          </ul>
+                        </div>
+                        <div class="minicard__price">
+                          <div class="minicard__usd">ID5456151</div>
+                          <div class="minicard__rub"><span>цена</span> по запросу </div>
+                        </div>
+                      </div>
+                      <div class="minicard__btn">
+                        <button class="btn btn-line btn-full" data-fancybox="catalog" data-type="ajax" data-src="_popup-card.html">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="minicard">
+                      <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span>
+                      </div>
+                      <div class="minicard__desc">
+                        <div class="minicard__props">
+                          <ul>
+                            <li>Комнат: <span>3</span></li>
+                            <li>Площадь: <span>775 м2</span></li>
+                            <li>Этаж: <span>2</span></li>
+                          </ul>
+                        </div>
+                        <div class="minicard__price">
+                          <div class="minicard__usd">ID5456151</div>
+                          <div class="minicard__rub"><span>цена</span> по запросу </div>
+                        </div>
+                      </div>
+                      <div class="minicard__btn">
+                        <button class="btn btn-line btn-full" data-fancybox="catalog" data-type="ajax" data-src="_popup-card.html">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-similar-next">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_swiper-next"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="similar-details__dots"></div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>

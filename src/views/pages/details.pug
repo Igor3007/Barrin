@@ -18,7 +18,7 @@ block header
     .header-top__phone
       a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
     .header-top__btn
-      button.btn.btn-line.btn-small Заказать звонок
+      button.btn.btn-line.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
     .header-top__menu
       .burger
         i
@@ -45,12 +45,12 @@ block content
                 h1 Квартира в ЖК «Barrin House»
             .details-data__main
               .details-data__main-present
-                .pink-round-download
+                .pink-round-download(data-fancybox="" data-type="ajax" data-src="_popup-callback.html")
                   .pink-round-download__round
                   .pink-round-download__image
                     +bgimage('/img/common/presentation.png')
                     span.dl-text Скачать <br> презентацию
-                    +icons('#ic_dl') Скачать презентацию
+                      +icons('#ic_dl') 
               .details-data__main-cost
                 .details-data__main-wrp
                   .details-data__usd 2 629 879 $
@@ -71,13 +71,15 @@ block content
                   li 
                     span.props-name  Район: 
                     span.props-val Хамовники
-                button.btn.btn-line.btn-white ОСТАВИТЬ ЗАЯВКУ
+
+                .data-details__button
+                  button.btn.btn-line.btn-white(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") ОСТАВИТЬ ЗАЯВКУ
 
               .details-data__main-id
                 span ID
                 span 2664862
 
-  section.section-about
+  section.section-about.section-about--details
     .about
       .about__desc
         .about__desc-logo: +bgimage('/img/common/logo-barrin.svg')
@@ -90,7 +92,7 @@ block content
             each item, index in [1,2,3,4,5]
               .swiper-slide
                 .about-card-details
-                  .about-card-details__image: +bgimage('/img/about/'+index+'.jpg')
+                  .about-card-details__image: +bgimage('/img/common/chem.jpg')
 
           .swiper-about-nav
             .swiper-about-nav__prev: +icons('#ic_swiper-prev')
@@ -99,9 +101,21 @@ block content
 
 
   section.section-gallery-details
-    .container gallery
+    .gallery-details
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            +bgimage('/img/common/gallery-details.jpg')
+          .swiper-slide
+            +bgimage('/img/common/gallery-details.jpg')
+          .swiper-slide
+            +bgimage('/img/common/gallery-details.jpg')
+      .swiper-gdetails-nav
+        .swiper-gdetails-nav__prev: +icons('#ic_swiper-prev')
+        .swiper-gdetails-nav__dots
+        .swiper-gdetails-nav__next: +icons('#ic_swiper-next')
 
-  section.presentation
+  section.presentation.presentation--details
     .presentation__wrp
       .presentation__bg: +bgimage('/img/common/')
       .presentation__content
@@ -118,7 +132,7 @@ block content
           .presentation-main__right
             +bgimage('/img/common/presentation-hd.png')
 
-  section.videoblock
+  section.videoblock.videoblock--details(style="background-image: url(/img/common/sale-bg.svg)")
     .container
       .videoblock__title Видео о ЖК Barrin House
       .videoblock__content
@@ -128,11 +142,34 @@ block content
         }) 
 
   section.section-form-details
-    .container form
+    .container 
+      .form-details
+        .form-details__title Остались вопросы?
+        .form-details__subtitle Укажите свои контакты и менеджер свяжется с вами
+        .form-details__form
+          .form
+            .form__item
+              .form__subitem: input(type="text" placeholder="Ваше имя")
+              .form__subitem: input(type="tel" placeholder="Ваш телефон")
+              .form__subitem
+                button.btn.btn-line.btn-white(type="submit") записаться на экскурсию
 
-  section.section-similar-details
-    .container similar
 
+  section.section-similar-details(style="background-image: url(/img/common/bg-details-forn.svg)")
+    .container 
+      .similar-details
+        .similar-details__title Похожие объекты
+        .similar-details__list
+          .swiper-similar-prev: +icons('#ic_swiper-prev')
+          .swiper-container
+            .swiper-wrapper
+              .swiper-slide: +minicard('1')
+              .swiper-slide: +minicard('1')
+              .swiper-slide: +minicard('1')
+              .swiper-slide: +minicard('1')
+              .swiper-slide: +minicard('1')
+          .swiper-similar-next: +icons('#ic_swiper-next')
+        .similar-details__dots
 
 
 
